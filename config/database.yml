@@ -15,7 +15,7 @@ development:
   database: kicksight_development
   pool: 5
   username: root
-  password:
+  password: rails
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   database: kicksight_test
   pool: 5
   username: root
-  password:
+  password: rails
   host: localhost
 
 production:
@@ -38,5 +38,5 @@ production:
   database: kicksight_production
   pool: 5
   username: root
-  password:
+  password: rails
   host: localhost
