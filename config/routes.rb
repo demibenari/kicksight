@@ -1,18 +1,5 @@
 Kicksight::Application.routes.draw do
 
-  resources :daily_pledges
-
-  resources :pledges
-
-  resources :kick_projects
-
-
-  resources :users
-
-
-  resources :kick_categories
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

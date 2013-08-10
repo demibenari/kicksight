@@ -13,36 +13,5 @@
 
 ActiveRecord::Schema.define(:version => 20130810145732) do
 
-  create_table "daily_pledges", :force => true do |t|
-    t.string   "kick_project_id"
-    t.integer  "pledge_id"
-    t.date     "push_date"
-    t.integer  "amount_backers"
-    t.integer  "amount_pledged"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
-  create_table "kick_categories", :force => true do |t|
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "kick_projects", :force => true do |t|
-    t.integer  "kick_category_id"
-    t.string   "name"
-    t.date     "expiration_date"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "password"
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
 end
