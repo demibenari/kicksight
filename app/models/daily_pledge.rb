@@ -1,7 +1,10 @@
-class DailyPledge < ActiveRecord::Base
-  attr_accessible :amount_bakcers, :amount_pledges, :kick_project_id, :pledge_id, :push_date
+require 'rubygems'
+#require 'composite_primary_keys'
 
-  self.primary_keys :kick_project_id, :pledge_id
+class DailyPledge < ActiveRecord::Base
+  attr_accessible :pledge_id, :amount_bakcers, :amount_pledges,  :push_date
+
+#  self.primary_keys  :pledge_id, :push_date
 
   belongs_to :pledge
 end

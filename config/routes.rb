@@ -1,6 +1,6 @@
 Kicksight::Application.routes.draw do
 
-  resources :cat_projects_rels
+  resources :categories_projects
 
 
   resources :daily_pledges

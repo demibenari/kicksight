@@ -2,8 +2,8 @@
 
 one:
   kick_category_id: 1
-  kick_project_id: 
+  kick_project_id: MyString
 
 two:
   kick_category_id: 1
-  kick_project_id: 
+  kick_project_id: MyString

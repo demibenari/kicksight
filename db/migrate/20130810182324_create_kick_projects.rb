@@ -8,8 +8,6 @@ class CreateKickProjects < ActiveRecord::Migration
       t.string :picture_link
       t.string :video_link
       t.integer :status_id
-
-      t.timestamps
     end
   end
 end
