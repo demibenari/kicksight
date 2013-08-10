@@ -4,7 +4,7 @@ class CreateKickProjects < ActiveRecord::Migration
       t.integer :id
       t.integer :kick_category_id
       t.string :name
-      t.da :expiration_date
+      t.date :expiration_date
 
       t.timestamps
     end
