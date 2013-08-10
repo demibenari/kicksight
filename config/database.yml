@@ -39,4 +39,4 @@ production:
   pool: 5
   username: root
   password: railsprod
-  host: localhost
+  host: kicksightprod.cmd5shpdhqmx.us-west-2.rds.amazonaws.com
