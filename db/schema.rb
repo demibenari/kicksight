@@ -11,7 +11,56 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130810145732) do
+ActiveRecord::Schema.define(:version => 20130810182554) do
 
+  create_table "daily_pledges", :force => true do |t|
+    t.string   "kick_project_id"
+    t.integer  "pledge_id"
+    t.date     "push_date"
+    t.integer  "amount_bakcers"
+    t.integer  "amount_pledges"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "kick_categories", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "kick_projects", :force => true do |t|
+    t.integer  "kick_category_id"
+    t.string   "name"
+    t.date     "expiration_date"
+    t.string   "project_link"
+    t.string   "picture_link"
+    t.string   "video_link"
+    t.integer  "status_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "pledges", :force => true do |t|
+    t.string   "kick_project_id"
+    t.integer  "min_amount"
+    t.string   "description"
+    t.date     "delivery_date"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "statuses", :force => true do |t|
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

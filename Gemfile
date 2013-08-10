@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 
 gem 'nokogiri', '~> 1.6.0'
+gem 'composite_primary_keys', '~> 3.1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.

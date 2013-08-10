@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Kick category:</b>
+  <%= @cat_projects_rel.kick_category_id %>
+</p>
+
+<p>
+  <b>Kick project:</b>
+  <%= @cat_projects_rel.kick_project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_cat_projects_rel_path(@cat_projects_rel) %> |
+<%= link_to 'Back', cat_projects_rels_path %>

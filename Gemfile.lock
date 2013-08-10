@@ -37,6 +37,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    composite_primary_keys (3.1.6)
+      activerecord (>= 3.0.5)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -52,7 +54,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     mini_portile (0.5.1)
-    multi_json (1.7.8)
+    multi_json (1.7.9)
     mysql2 (0.3.13)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
@@ -107,6 +109,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  composite_primary_keys (~> 3.1.0)
   jquery-rails
   mysql2
   nokogiri (~> 1.6.0)

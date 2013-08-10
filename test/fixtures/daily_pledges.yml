@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  kick_project_id: MyString
+  pledge_id: 1
+  push_date: 2013-08-10
+  amount_bakcers: 1
+  amount_pledges: 1
+
+two:
+  kick_project_id: MyString
+  pledge_id: 1
+  push_date: 2013-08-10
+  amount_bakcers: 1
+  amount_pledges: 1
