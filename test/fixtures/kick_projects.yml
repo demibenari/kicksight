@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  kick_category_id: 1
+  name: MyString
+  expiration_date: 
+
+two:
+  id: 1
+  kick_category_id: 1
+  name: MyString
+  expiration_date: 

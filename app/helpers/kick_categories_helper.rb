@@ -1,0 +1,2 @@
+module KickCategoriesHelper
+end
