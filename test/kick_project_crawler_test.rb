@@ -1,5 +1,5 @@
 require 'test/unit'
-require '../lib/kick_project_crawler'
+require File.dirname(__FILE__) + '/../lib/kick_project_crawler'
 
 class KickProjectCrawlerTest < Test::Unit::TestCase
 
