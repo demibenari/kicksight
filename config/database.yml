@@ -12,11 +12,11 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kicksight_development
+  database: kicksightprod
   pool: 5
   username: root
-  password: rails
-  host: localhost
+  password: railsprod
+  host: kicksightprod.cmd5shpdhqmx.us-west-2.rds.amazonaws.com
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,11 +25,11 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kicksight_test
+  database: kicksightprod
   pool: 5
   username: root
-  password: rails
-  host: localhost
+  password: railsprod
+  host: kicksightprod.cmd5shpdhqmx.us-west-2.rds.amazonaws.com
 
 production:
   adapter: mysql2
