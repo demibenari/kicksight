@@ -1,5 +1,9 @@
 Kicksight::Application.routes.draw do
+<<<<<<< HEAD
   resources :daily_pledges
+=======
+  resources :pledges
+>>>>>>> 8255d2988918407e6c6e34f4622169ecb4bd99df
 
 
   resources :kick_projects
