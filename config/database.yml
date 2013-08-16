@@ -15,8 +15,8 @@ development:
   database: kicksightprod
   pool: 5
   username: root
-  password: railsprod
-  host: kicksightprod.cmd5shpdhqmx.us-west-2.rds.amazonaws.com
+  password: rails
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
