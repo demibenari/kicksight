@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  kick_category_id: 1
-  kick_project_id: MyString
-
-two:
-  kick_category_id: 1
-  kick_project_id: MyString
