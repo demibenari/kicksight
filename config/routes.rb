@@ -1,4 +1,6 @@
 Kicksight::Application.routes.draw do
+  resources :projects
+
   resources :users
 
   resources :dailies
@@ -6,8 +8,6 @@ Kicksight::Application.routes.draw do
   resources :push_dates
 
   resources :pledges
-
-  resources :projects
 
   resources :statuses
 

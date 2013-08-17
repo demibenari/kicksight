@@ -27,6 +27,11 @@
       <%= f.text_field :name %>
     </div>
     <div class="field">
+      <%= f.label :expiration_date %>
+      <br>
+      <%= f.date_select :expiration_date %>
+    </div>
+    <div class="field">
       <%= f.label :project_link %>
       <br>
       <%= f.text_field :project_link %>

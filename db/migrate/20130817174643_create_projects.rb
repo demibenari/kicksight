@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :kick_id
       t.integer :category_id
       t.string :name
+      t.date :expiration_date
       t.string :project_link
       t.string :picture_link
       t.string :video_link

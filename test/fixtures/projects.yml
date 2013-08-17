@@ -4,6 +4,7 @@ one:
   kick_id: MyString
   category_id: 1
   name: MyString
+  expiration_date: 2013-08-17
   project_link: MyString
   picture_link: MyString
   video_link: MyString
@@ -13,6 +14,7 @@ two:
   kick_id: MyString
   category_id: 1
   name: MyString
+  expiration_date: 2013-08-17
   project_link: MyString
   picture_link: MyString
   video_link: MyString

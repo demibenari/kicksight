@@ -1,4 +1,4 @@
 json.array!(@projects) do |project|
-  json.extract! project, :kick_id, :category_id, :name, :project_link, :picture_link, :video_link, :status_id
+  json.extract! project, :kick_id, :category_id, :name, :expiration_date, :project_link, :picture_link, :video_link, :status_id
   json.url project_url(project, format: :json)
 end
