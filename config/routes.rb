@@ -18,7 +18,11 @@ Kicksight::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root :to => 'main#index'
+  root :to => 'mains#index'
+
+  resource :mains do
+    get :get_projects, on: :member
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

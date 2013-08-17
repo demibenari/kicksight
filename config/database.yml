@@ -15,7 +15,6 @@ development:
   pool: 5
   username: root
   password: rails
-  socket: /var/run/mysqld/mysqld.sock
   hostname: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +27,6 @@ test:
   pool: 5
   username: root
   password: rails
-  socket: /var/run/mysqld/mysqld.sock
   hostname: localhost
 
 production:
@@ -38,5 +36,4 @@ production:
   pool: 5
   username: root
   password: railsprod
-  socket: /var/run/mysqld/mysqld.sock
   hostname: localhost
