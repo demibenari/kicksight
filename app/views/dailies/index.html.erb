@@ -1,0 +1,33 @@
+<h1>Listing dailies</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Pledge</th>
+    <th>Push date</th>
+    <th>Amount backers integer</th>
+    <th>Amount pledged</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @dailies.each do |daily| %>
+      <tr>
+        <td><%= daily.pledge_id %></td>
+        <td><%= daily.Push_date_id %></td>
+        <td><%= daily.amount_backers_integer %></td>
+        <td><%= daily.amount_pledged %></td>
+        <td><%= link_to 'Show', daily %></td>
+        <td><%= link_to 'Edit', edit_daily_path(daily) %></td>
+        <td><%= link_to 'Destroy', daily, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Daily', new_daily_path %>

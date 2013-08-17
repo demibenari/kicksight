@@ -1,4 +1,18 @@
 Kicksight::Application.routes.draw do
+  resources :users
+
+  resources :dailies
+
+  resources :push_dates
+
+  resources :pledges
+
+  resources :projects
+
+  resources :statuses
+
+  resources :categories
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

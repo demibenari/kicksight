@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  kick_id: MyString
+  category_id: 1
+  name: MyString
+  project_link: MyString
+  picture_link: MyString
+  video_link: MyString
+  status_id: 1
+
+two:
+  kick_id: MyString
+  category_id: 1
+  name: MyString
+  project_link: MyString
+  picture_link: MyString
+  video_link: MyString
+  status_id: 1
