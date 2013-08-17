@@ -11,9 +11,13 @@ class KickProjectCrawler
     @doc = Nokogiri::HTML(open(@url))
     #@doc.search('div #stats', '//h3/a').each { |link| puts link.content }
 
+    # Project variable to fill
+    project = Project.new
 
     projectTitle = @doc.css('h2#title').text
     puts projectTitle
+
+    project.name = projectTitle
 
     shortDescription = @doc.css('p.big_type').text
     puts shortDescription

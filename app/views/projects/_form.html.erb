@@ -27,6 +27,16 @@
       <%= f.text_field :name %>
     </div>
     <div class="field">
+      <%= f.label :description %>
+      <br>
+      <%= f.text_field :description %>
+    </div>
+    <div class="field">
+      <%= f.label :goal %>
+      <br>
+      <%= f.number_field :goal %>
+    </div>
+    <div class="field">
       <%= f.label :expiration_date %>
       <br>
       <%= f.date_select :expiration_date %>

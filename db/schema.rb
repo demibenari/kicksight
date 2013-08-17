@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130817153746) do
+ActiveRecord::Schema.define(version: 20130817182845) do
 
   create_table "categories", force: true do |t|
     t.string "description"
@@ -29,6 +29,19 @@ ActiveRecord::Schema.define(version: 20130817153746) do
     t.integer "min_amount"
     t.string "description"
     t.date "delivery_date"
+  end
+
+  create_table "projects", force: true do |t|
+    t.string "kick_id"
+    t.integer "category_id"
+    t.string "name"
+    t.string "description"
+    t.integer "goal"
+    t.date "expiration_date"
+    t.string "project_link"
+    t.string "picture_link"
+    t.string "video_link"
+    t.integer "status_id"
   end
 
   create_table "push_dates", force: true do |t|
