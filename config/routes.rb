@@ -1,4 +1,6 @@
 Kicksight::Application.routes.draw do
+  resources :subcategories
+
   resources :projects
 
   resources :users
