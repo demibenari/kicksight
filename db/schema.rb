@@ -11,6 +11,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130817192530) do
+ActiveRecord::Schema.define(version: 20130819223701) do
+
+  create_table "categories", force: true do |t|
+    t.string "description"
+  end
+
+  create_table "dailies", force: true do |t|
+    t.integer "project_id"
+    t.integer "push_date_id"
+    t.integer "amount_backers"
+    t.integer "amount_pledged"
+  end
+
+  create_table "pledges", force: true do |t|
+    t.integer "project_id"
+    t.integer "min_amount"
+    t.string "description"
+    t.date "delivery_date"
+  end
+
+  create_table "projects", force: true do |t|
+    t.string "kick_id"
+    t.integer "category_id"
+    t.string "name"
+    t.string "description"
+    t.integer "goal"
+    t.date "start_date"
+    t.date "expiration_date"
+    t.string "project_link"
+    t.string "picture_link"
+    t.string "video_link"
+    t.integer "status_id"
+  end
+
+  create_table "push_dates", force: true do |t|
+    t.date "push_date"
+  end
+
+  create_table "statuses", force: true do |t|
+    t.string "description"
+  end
+
+  create_table "subcategories", force: true do |t|
+    t.string "description"
+    t.integer "category_id"
+  end
+
+  create_table "users", force: true do |t|
+    t.string "email"
+    t.string "password"
+  end
 
 end

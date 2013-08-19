@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @daily.project_id %>
+</p>
+
+<p>
+  <strong>Push date:</strong>
+  <%= @daily.push_date_id %>
+</p>
+
+<p>
+  <strong>Amount backers:</strong>
+  <%= @daily.amount_backers %>
+</p>
+
+<p>
+  <strong>Amount pledged:</strong>
+  <%= @daily.amount_pledged %>
+</p>
+
+<%= link_to 'Edit', edit_daily_path(@daily) %> |
+<%= link_to 'Back', dailies_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  project_id: 1
+  push_date_id: 1
+  amount_backers: 1
+  amount_pledged: 1
+
+two:
+  project_id: 1
+  push_date_id: 1
+  amount_backers: 1
+  amount_pledged: 1
