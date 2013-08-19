@@ -91,6 +91,8 @@ class KickProjectCrawler
       puts expiration_date_string
 
       # t.string :project_link
+      project_link = url
+      puts project_link
 
       # t.string :picture_link
       picture_link = doc.css('div#video-section div.video-player').attr('data-image').value;
