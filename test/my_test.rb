@@ -19,8 +19,10 @@ class MyTest < Test::Unit::TestCase
 
   def test_crawler
     crawler = KickProjectCrawler.new
-    crawler.get_pledges_status('http://www.kickstarter.com/projects/1708940685/spheres-of-power-a-new-pathfinder-magic-system?ref=home_spotlight')
+    #crawler.get_pledges_status('http://www.kickstarter.com/projects/1708940685/spheres-of-power-a-new-pathfinder-magic-system?ref=home_spotlight')
+    crawler.create_project('http://www.kickstarter.com/projects/1708940685/spheres-of-power-a-new-pathfinder-magic-system?ref=home_spotlight')
     assert true
+
 
   end
 end
