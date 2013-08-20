@@ -25,6 +25,7 @@ Kicksight::Application.routes.draw do
 
   resource :mains do
     get :get_projects, on: :member
+    get :get_project, on: :member
   end
 
   # Example of regular route:

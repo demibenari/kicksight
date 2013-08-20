@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130819223701) do
+ActiveRecord::Schema.define(version: 20130820070628) do
 
   create_table "categories", force: true do |t|
     t.string "description"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20130819223701) do
     t.string "video_link"
     t.integer "status_id"
   end
+
+  add_index "projects", ["category_id"], name: "index_projects_on_category_id", using: :btree
 
   create_table "push_dates", force: true do |t|
     t.date "push_date"

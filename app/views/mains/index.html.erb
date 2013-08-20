@@ -4,4 +4,11 @@
 
 Maayan, your main page code should be inserted in here :)
 
-<%= link_to 'action', Project.new, method: :get, remote: true %>
+<%= link_to 'action', nil, method: :get, remote: true %>
+
+<div id="main">
+  <%= button_to('Get Projects', {:controller => :mains, :action => :get_projects},
+                form: {'data-type' => 'json', id: 'get_projects'}, # these parameters are the html parameters
+                :method => 'get', :remote => true, :disable_with => 'loading...') %>
+  <button id="get" value="Get">Get</button>
+</div>
