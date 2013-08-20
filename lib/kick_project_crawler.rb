@@ -39,12 +39,11 @@ class KickProjectCrawler
 
       listOfDeliveryDates = @doc.css('ul#what-you-get li div.delivery-date')
       listOfDeliveryDates.each_with_index do |deliveryDate, index|
-        convertedDate = parse_delivery_date(deliveryDate)
+        convertedDate = parse_delivery_date(deliveryDate.inner_text)
         @deliveryDatesArray[index] = convertedDate
       end
 
 
-      #Pledge.create(:)
     else
       puts 'Wrong Project'
     end
@@ -62,6 +61,18 @@ class KickProjectCrawler
       puts kickProjectID
 
       # integer :category_id
+
+      category_element = doc.css('ul#project-metadata li.category')
+      parent_category = category_element.attr('data-project-parent-category')
+      # parent_category
+      category = Category.find_by_description(parent_category.to_s)
+      puts category.id.to_s + ' ' + category.description.to_s
+
+      # sub_category
+      category_text = category_element.inner_text
+      category_text = category_text.lstrip.rstrip
+      sub_category = Subcategory.find_by_description(category_text)
+      puts sub_category.id.to_s + ' ' + sub_category.description.to_s
 
       # string :name
       projectTitle = doc.css('h2#title').text
@@ -82,13 +93,17 @@ class KickProjectCrawler
       array = fundingPeriodString.split('-')
       # date :start_date
       start_date_string = array[0]
-      puts start_date_string
+      s_date = parse_date(start_date_string)
+      puts s_date
 
       # date :expiration_date
       expiration_date_string = array[1]
       index = expiration_date_string.index('(')
       expiration_date_string = expiration_date_string[0..index - 1]
-      puts expiration_date_string
+
+      expiration_date = parse_date(expiration_date_string)
+
+      puts expiration_date
 
       # t.string :project_link
       project_link = url
@@ -102,48 +117,25 @@ class KickProjectCrawler
       video_link = doc.css('div#video-section div.video-player').attr('data-video').value;
       puts video_link
 
+      project_status_id = 0;
       # t.integer :status_id
+      if (expiration_date < Date.today)
+        archivedStatus = Status.find_by_description('Archived')
+        project_status_id = archivedStatus.id
+      else
+        activeStatus = Status.find_by_description('Active')
+        project_status_id = activeStatus.id
+      end
+
+      project = Project.create(kick_id: kickProjectID, category_id: category.id,
+                               name: projectTitle, description: shortDescription,
+                               goal: goal, start_date: s_date, expiration_date: expiration_date,
+                               project_link: project_link, picture_link: picture_link,
+                               video_link: video_link, status_id: project_status_id)
+
       # --- Needs to be checked if the project it the first time and then add the type of the status id
 
     end
-  end
-
-  def loadProjects
-
-    @url = 'http://www.kickstarter.com/projects/1708940685/spheres-of-power-a-new-pathfinder-magic-system?ref=home_spotlight'
-    @doc = Nokogiri::HTML(open(@url))
-    #@doc.search('div #stats', '//h3/a').each { |link| puts link.content }
-
-    # Project variable to fill
-    project = Project.create!
-
-    # Project Title
-    projectTitle = @doc.css('h2#title').text
-    puts projectTitle
-
-    project.name = projectTitle
-
-    # Project Description
-    shortDescription = @doc.css('p.big_type').text
-    puts shortDescription
-
-    project.description= shortDescription
-
-    # Project Goal
-    goal = @doc.css('div#stats').text
-    puts goal
-
-    # "403 Backers    $14,713 pledged of $1,500 goal"
-
-    project.goal= goal.to_i # Converting to integer type
-
-
-    backersCount = @doc.css('div#backers_count').text
-    puts backersCount
-
-    pledged = @doc.css('div#pledged').text
-    puts pledged
-
   end
 
   private
@@ -173,8 +165,17 @@ class KickProjectCrawler
     return backersText.to_i
   end
 
+  #
+  # Parses from the Format: 'Aug 3, 2013' to a date Object
+  #
+  def parse_date(date_text)
+    date = date_text.lstrip.rstrip
+    convertedDate = Date::strptime(date, '%b %d, %Y')
+    return convertedDate
+  end
+
   def parse_delivery_date(deliveryDate)
-    dateString = deliveryDate.inner_text
+    dateString = deliveryDate
     dateString.slice! 'Estimated delivery:'
     dateString = dateString.lstrip.rstrip
 
