@@ -26,6 +26,11 @@ Kicksight::Application.routes.draw do
   resource :mains do
     get :get_projects, on: :member
     get :get_project, on: :member
+    get :get_all_categories, on: :collection
+    get :get_all_sub_categories, on: :collection
+    get :get_all_users, on: :collection
+    get :get_all_statuses, on: :collection
+    get :get_pledges_by_id, on: :collection
   end
 
   # Example of regular route:
