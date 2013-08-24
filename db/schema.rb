@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20130819223701) do
   create_table "pledges", force: true do |t|
     t.integer "project_id"
     t.integer "min_amount"
-    t.string  "description"
+    t.string  "description",   limit: 1000
     t.date    "delivery_date"
   end
 
