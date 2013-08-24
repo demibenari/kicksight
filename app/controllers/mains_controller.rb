@@ -68,10 +68,28 @@ class MainsController < ApplicationController
 
   end
 
-
   def get_all_dailies
-    projectID = params[:projectID]
+    projectName = params[:projectID]
 
+    all_dailies = get_dailies_by_kick_id(projectName)
 
+    render :ok, json: all_dailies.to_json()
+  end
+
+  def get_trendline
+    projectName = params[:projectID]
+
+    all_dailies = get_dailies_by_kick_id(projectName)
+
+    length_of_dailies = all_dailies.length
+    array_of_coords = Array.new(length_of_dailies)
+
+    all_dailies.each do | index, daily |
+      array_of_coords[index] = Array.new(2)
+      array_of_coords[index][0] = index
+      array_of_coords[index][1] = daily.amount_pledged
+    end
+
+    render :ok, json: all_dailies.to_json()
   end
 end

@@ -10,4 +10,18 @@ module MainsHelper
     end
 
   end
+
+  def get_dailies_by_kick_id (kick_id)
+    project = Project.find_by_kick_id(kick_id).id
+
+    all_dailies = nil
+
+    if !project.nil?
+      project_id = project
+      all_dailies = Daily.where(:project_id => project_id)
+    end
+
+    return all_dailies
+
+  end
 end

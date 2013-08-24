@@ -31,6 +31,9 @@ Kicksight::Application.routes.draw do
     get :get_all_users, on: :collection
     get :get_all_statuses, on: :collection
     get :get_pledges_by_id, on: :collection
+    get :get_all_dailies, on: :collection
+    get :get_trendline, on: :collection
+
   end
 
   # Example of regular route:
