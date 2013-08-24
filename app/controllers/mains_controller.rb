@@ -1,3 +1,5 @@
+require 'trendline'
+
 class MainsController < ApplicationController
   include MainsHelper
 
@@ -79,17 +81,19 @@ class MainsController < ApplicationController
   def get_trendline
     projectName = params[:projectID]
 
-    all_dailies = get_dailies_by_kick_id(projectName)
+    array_of_coords = get_all_daily_points_of_project(projectName)
 
-    length_of_dailies = all_dailies.length
-    array_of_coords = Array.new(length_of_dailies)
+    trenline = Trendline.new(array_of_coords)
+    trenline.calc_trenline
 
-    all_dailies.each do | index, daily |
-      array_of_coords[index] = Array.new(2)
-      array_of_coords[index][0] = index
-      array_of_coords[index][1] = daily.amount_pledged
-    end
+    render :ok, json: trenline.to_json()
+  end
 
-    render :ok, json: all_dailies.to_json()
+  def daily__project_points
+    projectName = params[:projectID]
+
+    array_of_coords = get_all_daily_points_of_project(projectName)
+
+    render :ok, json: array_of_coords.to_json()
   end
 end

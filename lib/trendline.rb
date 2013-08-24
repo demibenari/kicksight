@@ -1,20 +1,20 @@
 class Trendline
   attr_accessor :y_intercept, :slope
 
-
   def initialize(coordinates)
     @coordinates = coordinates
   end
 
   def calc_trenline
-
-    sum_mul_x_and_y = 0
-    sum_of_x = 0
-    sum_of_sqr_x = 0
-    sum_of_y = 0
+    sum_mul_x_and_y = 0.0
+    sum_of_x = 0.0
+    sum_of_sqr_x = 0.0
+    sum_of_y = 0.0
+    a =0.0, b= 0.0, c = 0.0, d = 0.0, e = 0.0, f = 0.0
+    calc_slope = 0.0
+    calc_y_intercept = 0.0
 
     # Calculating the Slope (m) of the Trendline
-
     @coordinates.each do |(x, y)|
       sum_mul_x_and_y += (x * y)
 
@@ -25,39 +25,35 @@ class Trendline
     end
 
     n = @coordinates.length
-    puts 'n = ' + n.to_s
 
     sum_mul_x_and_y *= n
 
     a =  sum_mul_x_and_y
-    puts 'a = ' + a.to_s
-
-    b = (sum_of_x * sum_of_y)
-    puts 'b = ' + b.to_s
-
+    b = sum_of_x * sum_of_y
     c = sum_of_sqr_x * n
-    puts 'c = ' + c.to_s
+    d = sum_of_x * sum_of_x
+    calc_slope +=  ((a-b).to_f/(c-d).to_f)
 
-    d = (sum_of_x * sum_of_x)
-    puts 'd = ' + d.to_s
-
-    slope =  (a - b) / (c - d)
-    puts 'slope = ' +  slope.to_s
+    #puts 'n = ' + n.to_s
+    #puts 'a = ' + a.to_s
+    #puts 'b = ' + b.to_s
+    #puts 'c = ' + c.to_s
+    #puts 'd = ' + d.to_s
+    #puts 'slope = ' +  calc_slope.to_s
 
     # Calculating the y-intercept (b) of the Trendline
     e = sum_of_y
-    puts 'e = ' + e.to_s
+    f = calc_slope * sum_of_x
 
-    f = slope * sum_of_x
-    puts 'f = ' + f.to_s
+    calc_y_intercept += ((e-f).to_f/n)
 
-    y_intercept = (e - f) / n
+    #puts 'e = ' + e.to_s
+    #puts 'f = ' + to_s
+    #puts calc_y_intercept.to_s
 
-    puts y_intercept.to_s
+    puts 'Equasion is: y=' + calc_slope.to_s + 'x + ' + calc_y_intercept.to_s
 
-    puts 'Equasion is: y=' + slope.to_s + 'x + ' + y_intercept.to_s
-
-    self.slope = slope
-    self.y_intercept = y_intercept
+    self.slope = calc_slope
+    self.y_intercept = calc_y_intercept
   end
 end
