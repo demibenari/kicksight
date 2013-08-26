@@ -24,13 +24,16 @@ Kicksight::Application.routes.draw do
   root :to => 'mains#index'
 
   resource :mains do
-    get :get_projects, on: :member
-    get :get_project, on: :member
+    get :get_projects, on: :collection
+    get :get_project, on: :collection
     get :get_all_categories, on: :collection
     get :get_all_sub_categories, on: :collection
     get :get_all_users, on: :collection
     get :get_all_statuses, on: :collection
     get :get_pledges_by_id, on: :collection
+    get :get_all_dailies, on: :collection
+    get :daily_project_points, on: :collection
+    get :get_trendline, on: :collection
   end
 
   # Example of regular route:
