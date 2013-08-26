@@ -1,28 +1,85 @@
 .pledge-total {
-  color: green;
+    color: green;
 }
 
 .green {
-  background-color: #fbfbfb;
-  border: 1px solid green;
-  box-shadow: 0 0 0.7em green, 0 0 0.7em green, 0 0 0.7em green;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    box-shadow: 0 0 0.2em #00AF64, 0 0 0.5em #00AF64, 0 0 0.5em #00AF64;
 }
 
 .red {
-  background-color: #fbfbfb;
-  border: 1px solid red;
-  box-shadow: 0 0 0.7em red, 0 0 0.7em red, 0 0 0.7em red;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    box-shadow: 0 0 0.2em #FF3D00, 0 0 0.5em #FF3D00, 0 0 0.5em #FF3D00;
 }
-/*
 ul {
-  list-style-type: none;
+    list-style-type: none;
 
 }
-*/
 li {
-  margin: 10px;
-  display: inline-block;
-    /*
-  float:right;
-  */
+    margin: 2.5%;
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+li h3 {
+
+}
+.projectView {
+    height: 150px;
+}
+.till {
+    background-color: rgb(149, 228, 215);
+}
+.white {
+    background-color: white;
+}
+.frame {
+    width: 250px;
+    height: 200px;
+    position: relative;
+}
+.innerFrame {
+    width: 200px;
+    height: 125px;
+    position: relative;
+    top: 15px;
+    left:25px;
+}
+.wrap {
+    position: relative;
+    display: block;
+    top: 30px;
+}
+.title {
+    width: 125px;
+    height: 30px;
+    position: relative;
+    left: 25px;
+    display: inline-block;
+}
+.total {
+    width: 65px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    left: 30px;
+}
+[ng-cloak] {
+    display: none;
+}
+
+body {
+    padding: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+table td.number {
+    text-align: right;
+}
+
+.navbar-fixed-top {
+    z-index: 1111;
 }
