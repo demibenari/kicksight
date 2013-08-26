@@ -8,11 +8,16 @@ class KickProjectCrawler
 
     projectID = get_project_id_from_doc(doc)
 
+    puts 'loading project...'
+    puts 'Name: ' + projectID.to_s
+
     kickProjectID = Project.find_by_kick_id(projectID)
+
+    puts kickProjectID
 
     if (!kickProjectID.nil?)
 
-      listOfPledges = @doc.css('ul#what-you-get li h5')
+      listOfPledges = doc.css('ul#what-you-get li h5')
 
       numberOfPledges = listOfPledges.length
 
@@ -26,18 +31,18 @@ class KickProjectCrawler
         @pledgesArray[index] = pledgeAmount
       end
 
-      listOfBackers = @doc.css('ul#what-you-get li p.backers-limits span.backers-wrap span.num-backers')
+      listOfBackers = doc.css('ul#what-you-get li p.backers-limits span.backers-wrap span.num-backers')
       listOfBackers.each_with_index do |numOfBakers, index|
         backersAmount = parse_backers(numOfBakers.inner_text)
         @backersArray[index] = backersAmount
       end
 
-      listOfDesc = @doc.css('ul#what-you-get li div.desc p.small_type')
+      listOfDesc = doc.css('ul#what-you-get li div.desc p.small_type')
       listOfDesc.each_with_index do |description, index|
         @descriptionsArray[index] = description.inner_text
       end
 
-      listOfDeliveryDates = @doc.css('ul#what-you-get li div.delivery-date')
+      listOfDeliveryDates = doc.css('ul#what-you-get li div.delivery-date')
       listOfDeliveryDates.each_with_index do |deliveryDate, index|
         convertedDate = parse_delivery_date(deliveryDate.inner_text)
         @deliveryDatesArray[index] = convertedDate

@@ -42,7 +42,7 @@ module MainsHelper
     all_dailies = get_dailies_by_kick_id(projectName)
 
     length_of_dailies = all_dailies.length
-    array_of_coords = Array.new(length_of_dailies) { [0, Daily.new, Date.new] }
+    array_of_coords = Array.new(length_of_dailies) { [0, Daily.new, Date.new, 0] }
 
     all_dailies.each_with_index do |daily, index|
       array_of_coords[index][0] = index
@@ -50,6 +50,7 @@ module MainsHelper
 
       push_date = PushDate.find(daily.push_date_id)
       array_of_coords[index][2] = push_date.push_date
+      array_of_coords[index][3] = daily.amount_backers
     end
     return array_of_coords
   end

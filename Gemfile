@@ -10,6 +10,7 @@ gem 'mysql2'
 
 gem 'nokogiri', '~> 1.6.0'
 gem 'composite_primary_keys', '~>6.0.0'
+gem 'clockwork'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

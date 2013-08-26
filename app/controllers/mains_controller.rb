@@ -8,7 +8,6 @@ class MainsController < ApplicationController
   #
   def index
     respond_to do |format|
-      @project = Project.find_by(0)
       format.html
     end
   end
@@ -89,11 +88,18 @@ class MainsController < ApplicationController
     render :ok, json: trenline.to_json()
   end
 
-  def daily__project_points
+  def daily_project_points
     projectName = params[:projectID]
+    include_dates = params[:dates]
 
-    array_of_coords = get_all_daily_points_of_project(projectName)
+    if (include_dates.nil?)
+      array_of_coords = get_all_daily_points_of_project(projectName)
+    else
+      array_of_coords = get_all_daily_points_of_project_with_date(projectName)
+    end
 
     render :ok, json: array_of_coords.to_json()
   end
+
+
 end
