@@ -1,7 +1,7 @@
 angular.module('proj', ['ngResource']);
 
 function ProjectsCtrl($scope, $resource) {
-    var _projects = $resource('/mains/get_projects/:withIDs', [{withIDs: true}]);
+    var _projects = $resource('http://kicksight.herokuapp.com/mains/get_projects/:withIDs', [{withIDs: true}]);
     $scope.projects = _projects.query();
     $scope.color = function(project) {
         return project.pledges > (project.total * 0.5) ?  'green' : 'red';
