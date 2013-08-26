@@ -23,6 +23,8 @@ Kicksight::Application.routes.draw do
   # root 'welcome#index'
   root :to => 'mains#index'
 
+  get '/templates/:path.html' => 'templates#page', :constraints => { :path => /.+/  }
+
   resource :mains do
     get :get_projects, on: :collection
     get :get_project, on: :collection

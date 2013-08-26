@@ -1,5 +1,5 @@
-class TemplateController
-  #get /templates/:path.html => 'templates#page', :constraints => { :path => /.+/  }
+class TemplatesController < ApplicationController
+
   #caches_page :page
 
   def page
@@ -7,8 +7,9 @@ class TemplateController
     render :template => 'templates/' + @path, :layout => nil
   end
 
+  # This code is not so good!!!
   def custom_asset_template_url(path)
-    "http://kicksight.herokuapp.com/templates/#{path}"
+    return "http://localhost:3000/templates/#{path}"
   end
 
 end
