@@ -1,0 +1,28 @@
+.pledge-total {
+  color: green;
+}
+
+.green {
+  background-color: #fbfbfb;
+  border: 1px solid green;
+  box-shadow: 0 0 0.7em green, 0 0 0.7em green, 0 0 0.7em green;
+}
+
+.red {
+  background-color: #fbfbfb;
+  border: 1px solid red;
+  box-shadow: 0 0 0.7em red, 0 0 0.7em red, 0 0 0.7em red;
+}
+/*
+ul {
+  list-style-type: none;
+
+}
+*/
+li {
+  margin: 10px;
+  display: inline-block;
+    /*
+  float:right;
+  */
+}

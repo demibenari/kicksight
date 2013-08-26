@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="proj">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.js"></script>
+  <link type="text/css" rel="stylesheet" href="projects.css">
+  <script src="projectsCtrl.js"></script>
+</head>
+<body>
+<div ng-controller="ProjectsCtrl">
+  <ul class="unstyled">
+    {{percent()}}
+    <li class="{{color(project)}}" ng-repeat="project in projects">
+      <h3>{{project.projectName}} <span class="{{project.color}}">{{project.percent}}%</span></h3>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

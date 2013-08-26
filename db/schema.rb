@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130820070628) do
+ActiveRecord::Schema.define(version: 20130819223701) do
 
   create_table "categories", force: true do |t|
     t.string "description"
@@ -27,25 +27,23 @@ ActiveRecord::Schema.define(version: 20130820070628) do
   create_table "pledges", force: true do |t|
     t.integer "project_id"
     t.integer "min_amount"
-    t.string "description"
-    t.date "delivery_date"
+    t.string  "description",   limit: 1000
+    t.date    "delivery_date"
   end
 
   create_table "projects", force: true do |t|
-    t.string "kick_id"
+    t.string  "kick_id"
     t.integer "category_id"
-    t.string "name"
-    t.string "description"
+    t.string  "name"
+    t.string  "description"
     t.integer "goal"
-    t.date "start_date"
-    t.date "expiration_date"
-    t.string "project_link"
-    t.string "picture_link"
-    t.string "video_link"
+    t.date    "start_date"
+    t.date    "expiration_date"
+    t.string  "project_link"
+    t.string  "picture_link"
+    t.string  "video_link"
     t.integer "status_id"
   end
-
-  add_index "projects", ["category_id"], name: "index_projects_on_category_id", using: :btree
 
   create_table "push_dates", force: true do |t|
     t.date "push_date"
@@ -56,7 +54,7 @@ ActiveRecord::Schema.define(version: 20130820070628) do
   end
 
   create_table "subcategories", force: true do |t|
-    t.string "description"
+    t.string  "description"
     t.integer "category_id"
   end
 
