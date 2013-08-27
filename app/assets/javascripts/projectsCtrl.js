@@ -18,10 +18,12 @@ function ProjectsCtrl($scope, $resource) {
     }
 
     $scope.percent = function () {
+        alert('Precent');
         angular.forEach($scope.projects, function (projectData) {
-            projectData.percent = Math.round(projectData.pledges / projectData.total * 100);
+            projectData.percent = Math.round(projectData.current / projectData.goal * 100);
         });
     };
+
     $scope.remaining = function () {
         var count = 0;
         angular.forEach($scope.projectData.projectPledges, function (projectData) {
