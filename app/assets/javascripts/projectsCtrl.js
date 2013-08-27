@@ -1,26 +1,32 @@
-angular.module('proj', ['ngResource']);
-_getProjectData = function() {
-    var _project = $resource('http://kicksight.herokuapp.com/mains/get_projects/:withIDs', [{withIDs: true}]);
+angular.module('KickSight', ['ngResource']);
+
+_getProjectData = function () {
+    var _project = $resource('localhost:3000/mains/get_projects/:withIDs', [
+        {withIDs: true}
+    ]);
     //get a single project data
 };
+
 function ProjectsCtrl($scope, $resource) {
-    var _projects = $resource('http://kicksight.herokuapp.com/mains/get_projects');
+
+    alert('bbbbb');
+    var _projects = $resource('../mains/get_projects');
 
     $scope.projects = _projects.query();
-    $scope.color = function(project) {
-        return project.pledges > (project.goal * 0.5) ?  'green' : 'red';
+    $scope.color = function (project) {
+        return project.pledges > (project.goal * 0.5) ? 'green' : 'red';
     }
 
-    $scope.percent = function() {
-        angular.forEach($scope.projects, function(projectData) {
+    $scope.percent = function () {
+        angular.forEach($scope.projects, function (projectData) {
             projectData.percent = Math.round(projectData.pledges / projectData.total * 100);
         });
     };
-    $scope.remaining = function() {
+    $scope.remaining = function () {
         var count = 0;
-        angular.forEach($scope.projectData.projectPledges, function(projectData) {
+        angular.forEach($scope.projectData.projectPledges, function (projectData) {
             count += projectData.amount ? 0 : 1;
         });
         return count;
     };
-}
+};
