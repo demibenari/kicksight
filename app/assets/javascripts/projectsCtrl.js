@@ -1,10 +1,14 @@
 angular.module('proj', ['ngResource']);
-
+_getProjectData = function() {
+    var _project = $resource('http://kicksight.herokuapp.com/mains/get_projects/:withIDs', [{withIDs: true}]);
+    //get a single project data
+};
 function ProjectsCtrl($scope, $resource) {
-    var _projects = $resource('/mains/get_projects/:withIDs', [{withIDs: true}]);
+    var _projects = $resource('http://kicksight.herokuapp.com/mains/get_projects');
+
     $scope.projects = _projects.query();
     $scope.color = function(project) {
-        return project.pledges > (project.total * 0.5) ?  'green' : 'red';
+        return project.pledges > (project.goal * 0.5) ?  'green' : 'red';
     }
 
     $scope.percent = function() {
