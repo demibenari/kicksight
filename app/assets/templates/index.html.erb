@@ -1,0 +1,36 @@
+<div ng-controller="indexCtrl">
+  <h1>{{ title }}</h1>
+</div>
+<div class="banner">
+    <div class="logoContainer">
+        <div class="logoImg">Kick<span>Sight</span></div>
+        <div class="logoMoto text1">See Your Project Rise To Success!</div>
+        <div class="containerF text1">
+            <form>
+                <input type="text" name="searchP">
+                <img src="<%= path_to_asset('bg.png') %>"/>
+                </input>
+            </form>
+        </div>
+    </div>
+    <div class="menuContainer center text1">
+        <ul class="menul">
+            <li><a>Home</a></li>
+            <li><a>Sign In</a></li>
+            <li><a>Projects</a>
+                <ul class="menul subMenu">
+                    <li><a>Most Successful</a></li>
+                    <li><a>Failors</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="frontView center">
+    <div class="mainContent">
+        <h3 class="header center">Welcome!</h3>
+        <div class="content center">
+        </div>
+    </div>
+</div>
+
