@@ -9,7 +9,12 @@ _getProjectData = function () {
 
 function ProjectsCtrl($scope, $resource) {
 
-    alert('bbbbb');
+    var _view = 1;
+    var view1VisibilityMode = _view === 1 ? "block" : "none";
+    var view2VisibilityMode = _view === 2 ? "block" : "none";
+    var view3VisibilityMode = _view === 3 ? "block" : "none";
+    var view4VisibilityMode = _view === 4 ? "block" : "none";
+
     var _projects = $resource('../mains/get_projects');
 
     $scope.projects = _projects.query();
@@ -18,12 +23,22 @@ function ProjectsCtrl($scope, $resource) {
     }
 
     $scope.percent = function () {
-        alert('Precent');
         angular.forEach($scope.projects, function (projectData) {
             projectData.percent = Math.round(projectData.current / projectData.goal * 100);
         });
     };
 
+    $scope.changeView = function (view) {
+          if (view === 1) _view = 1;
+          else if (view === 2) _view = 2;
+          else if (view === 3) _view = 3
+          else if (view === 4) _view = 4;
+
+        view1VisibilityMode = _view === 1 ? "block" : "none";
+        view2VisibilityMode = _view === 2 ? "block" : "none";
+        view3VisibilityMode = _view === 3 ? "block" : "none";
+        view4VisibilityMode = _view === 4 ? "block" : "none";
+    };
     $scope.remaining = function () {
         var count = 0;
         angular.forEach($scope.projectData.projectPledges, function (projectData) {

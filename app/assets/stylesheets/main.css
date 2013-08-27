@@ -139,3 +139,11 @@ iframe {
 ul {
     list-style: none;
 }
+
+.tab {
+    width: 100px;
+    height: 30px;
+    border: 1px solid grey;
+    cursor: pointer
+    color: lightgrey;
+}
