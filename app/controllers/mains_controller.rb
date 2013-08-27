@@ -101,5 +101,8 @@ class MainsController < ApplicationController
     render :ok, json: array_of_coords.to_json()
   end
 
+  def custom_asset_template_url(path)
+    return "http://localhost:3000/templates/#{path}"
+  end
 
 end

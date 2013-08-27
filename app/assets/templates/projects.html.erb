@@ -1,10 +1,8 @@
 <!doctype html>
-<html ng-app="proj">
+<html ng-app="Kicksight">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.js"></script>
-    <link type="text/css" rel="stylesheet" href="projects.css">
-    <script src="projectsCtrl.js"></script>
+    <%= stylesheet_link_tag 'projects' %>
+    <%= javascript_include_tag  'application','angular', 'angular-resource', 'projectsCtrl' %>
 </head>
 <body>
 <div ng-controller="ProjectsCtrl">
@@ -13,7 +11,7 @@
         <li class="" ng-repeat="project in projects">
             <div class="frame till">
                 <div class="innerFrame white">
-                    <img src="{{project.image_url}}" width="200" height="125"/>
+                  <img src="{{project.image_url}}" width="200" height="125"/>
                 </div>
                 <div class="wrap">
                     <div class="title white">{{project.name}}</div>
