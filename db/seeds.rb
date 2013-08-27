@@ -137,8 +137,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 57, amount_pledged: 1698)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 59, amount_pledged: 1749)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 61, amount_pledged: 1843)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 72, amount_pledged: 2722)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 83, amount_pledged: 3158)
 
 
 
@@ -161,8 +161,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 9, amount_pledged: 632)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 10, amount_pledged: 642)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 10, amount_pledged: 642)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 10, amount_pledged: 642)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 11, amount_pledged: 657)
 
 
 
@@ -191,8 +191,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 21, amount_pledged: 1156)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 24, amount_pledged: 1467)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 28, amount_pledged: 1750)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 32, amount_pledged: 2060)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 37, amount_pledged: 2467)
 
 
 
@@ -217,8 +217,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 13, amount_pledged: 576)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 15, amount_pledged: 769)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 18, amount_pledged: 1013)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 18, amount_pledged: 1013)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 18, amount_pledged: 1013)
 
 
 
@@ -256,8 +256,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 149, amount_pledged: 12864)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 150, amount_pledged: 12914)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 150, amount_pledged: 12914)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 152, amount_pledged: 12916)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 153, amount_pledged: 12921)
 
 
 
@@ -286,8 +286,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 315, amount_pledged: 24687)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 347, amount_pledged: 25376)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 453, amount_pledged: 29718)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 504, amount_pledged: 31290)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 567, amount_pledged: 33578)
 
 
 
@@ -310,8 +310,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 32, amount_pledged: 5469)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 39, amount_pledged: 5679)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 44, amount_pledged: 5877)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 47, amount_pledged: 5922)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 50, amount_pledged: 6011)
 
 
 
@@ -341,8 +341,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 2167, amount_pledged: 108695)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 2469, amount_pledged: 124634)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 2695, amount_pledged: 133567)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 2914, amount_pledged: 141862)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 3312, amount_pledged: 149684)
 
 
 
@@ -386,8 +386,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 174, amount_pledged: 8765)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 177, amount_pledged: 9957)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 182, amount_pledged: 11051)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 186, amount_pledged: 11101)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 190, amount_pledged: 11234)
 
 
 
@@ -455,8 +455,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 344, amount_pledged: 24075)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 353, amount_pledged: 24677)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 362, amount_pledged: 25279)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 362, amount_pledged: 25279)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 363, amount_pledged: 25283)
 
 
 
@@ -484,8 +484,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 13, amount_pledged: 769)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 15, amount_pledged: 843)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 17, amount_pledged: 1077)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 21, amount_pledged: 1154)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 26, amount_pledged: 1234)
 
 
 
@@ -506,8 +506,8 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 117, amount_pledged: 4695)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 132, amount_pledged: 5367)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 148, amount_pledged: 6120)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 153, amount_pledged: 6281)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 162, amount_pledged: 6457)
 
 
 
@@ -529,5 +529,92 @@ Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 32, amount_pledged: 1769)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 35, amount_pledged: 2139)
 Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 40, amount_pledged: 2510)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 0, amount_pledged: 0)
-Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 0, amount_pledged: 0)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 43, amount_pledged: 2611)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-28').id, amount_backers: 49, amount_pledged: 2657)
+
+
+
+
+
+c = Category.find_by_description('Fashion')
+
+
+
+
+
+p = Project.create(goal: 1000, start_date: '31.07.2013', expiration_date: '27.08.2013', kick_id: '579740801/a-classic-t-shirt-a-simple-design-the-right-price', name: 'A Classic T-Shirt, A Simple Design, The Right Price', description: 'A T-Shirt with a classic design. The shirt is one solid color and on the left chest of the shirt is a small Lobster. Come Take A Look!', project_link: 'http://www.kickstarter.com/projects/579740801/a-classic-t-shirt-a-simple-design-the-right-price', picture_link: 'https://s3.amazonaws.com/ksr/projects/624982/photo-main.jpg', category_id: c.id, status_id: Status.find_by_description('Archived').id)
+Pledge.create(project_id: p.id, min_amount: 1, delivery_date: '01.09.2013', description: 'You don''t want a T-Shirt but you like the idea, myself, or are in a giving mood. A BIG THANK YOU , sealed in an envelope, with a surprise!')
+Pledge.create(project_id: p.id, min_amount: 18, delivery_date: '01.09.2013', description: 'EARLY BIRD SPECIAL! One T-Shirt! AND The First To Ship Upon Project Completion! Your Choice of one of the designs shown! Pick any one in any size! U.S. Shipping Included in Price')
+Pledge.create(project_id: p.id, min_amount: 20, delivery_date: '01.10.2013', description: 'One T-Shirt! Your Choice of one of the designs shown! Pick any one in any size! U.S. Shipping Included in Price')
+Pledge.create(project_id: p.id, min_amount: 34, delivery_date: '01.09.2013', description: 'EARLY BIRD SPECIAL! TWO T-Shirts! AND The First To Ship Upon Project Completion! Your Choice of TWO of the designs shown! Pick any TWO in any size! U.S. Shipping Included in Price')
+Pledge.create(project_id: p.id, min_amount: 37, delivery_date: '01.10.2013', description: 'TWO T-Shirts! Your Choice of TWO of the designs shown! Pick any TWO in any size! U.S. Shipping Included in Price')
+Pledge.create(project_id: p.id, min_amount: 52, delivery_date: '01.10.2013', description: 'THREE T-Shirts! Your Choice of THREE of the designs shown! Pick any THREE in any size! U.S. Shipping Included in Price')
+Pledge.create(project_id: p.id, min_amount: 64, delivery_date: '01.09.2013', description: 'THE FOUR PACK! Any FOUR T-Shirt Designs in Any Size! AUTOMATICALLY BUMPED TO THE TOP OF THE SHIPPING LIST! U.S. Shipping Included in Price')
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-07-31').id, amount_backers: 1, amount_pledged: 2)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-01').id, amount_backers: 2, amount_pledged: 5)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-02').id, amount_backers: 4, amount_pledged: 8)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-03').id, amount_backers: 8, amount_pledged: 12)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-04').id, amount_backers: 10, amount_pledged: 18)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-05').id, amount_backers: 12, amount_pledged: 32)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-06').id, amount_backers: 15, amount_pledged: 42)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-07').id, amount_backers: 18, amount_pledged: 57)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-08').id, amount_backers: 20, amount_pledged: 68)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-09').id, amount_backers: 21, amount_pledged: 74)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-10').id, amount_backers: 22, amount_pledged: 105)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-11').id, amount_backers: 23, amount_pledged: 117)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-12').id, amount_backers: 25, amount_pledged: 184)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-13').id, amount_backers: 30, amount_pledged: 228)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-14').id, amount_backers: 32, amount_pledged: 257)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-15').id, amount_backers: 37, amount_pledged: 307)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-16').id, amount_backers: 38, amount_pledged: 358)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-17').id, amount_backers: 39, amount_pledged: 452)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-18').id, amount_backers: 40, amount_pledged: 512)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-19').id, amount_backers: 42, amount_pledged: 577)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-20').id, amount_backers: 44, amount_pledged: 630)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-21').id, amount_backers: 46, amount_pledged: 752)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-22').id, amount_backers: 48, amount_pledged: 753)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-23').id, amount_backers: 50, amount_pledged: 876)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 53, amount_pledged: 1157)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 55, amount_pledged: 1212)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 57, amount_pledged: 1438)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 60, amount_pledged: 1566)
+
+
+
+
+
+c = Category.find_by_description('Art')
+
+
+
+
+
+p = Project.create(goal: 1695, start_date: '06.08.2013', expiration_date: '27.08.2013', kick_id: '1566633060/tattoo-tarot-letterpress-art-print', name: 'Tattoo Tarot Letterpress Art Print', description: 'Oversized, tattoo-inspired tarot card, letterpress printed on soft, luxurious cotton cardstock.', project_link: 'http://www.kickstarter.com/projects/1566633060/tattoo-tarot-letterpress-art-print', picture_link: 'https://s3.amazonaws.com/ksr/projects/621403/photo-main.jpg', video_link: 'https://d2pq0u4uni88oo.cloudfront.net/projects/621403/video-275268-h264_high.mp4', category_id: c.id, status_id: Status.find_by_description('Archived').id)
+Pledge.create(project_id: p.id, min_amount: 1, delivery_date: '01.09.2013', description: 'GET A VOTE You are awesome! Pledge a dollar to make this project a reality. Your contribution earns you a vote to help decide what card to print next.')
+Pledge.create(project_id: p.id, min_amount: 5, delivery_date: '01.09.2013', description: 'DIGITAL WALLPAPER Your pledge gets you a vote for the next card as well as a sweet digital wallpaper for your phone, tablet or computer. Features the High Priestess art (see description).')
+Pledge.create(project_id: p.id, min_amount: 25, delivery_date: '01.09.2013', description: 'BLACK AND WHITE PRINT You''ll receive the black and white tattoo tarot card print on super heavy cotton cardstock with die-cut corners. You''ll also get the digital wallpaper and an opportunity to cast your vote for the next card.')
+Pledge.create(project_id: p.id, min_amount: 40, delivery_date: '01.09.2013', description: '4-COLOR DELUXE PRINT You''ll receive the four-color deluxe tattoo tarot card print on super heavy cotton cardstock with die-cut corners. You''ll also get the digital wallpaper and an opportunity to cast your vote for the next card.')
+Pledge.create(project_id: p.id, min_amount: 55, delivery_date: '01.09.2013', description: '4-COLOR DELUXE PRINT and BLACK AND WHITE PRINT You''ll receive one each of both prints. You''ll also get the digital wallpaper and an opportunity to cast your vote for the next card.')
+Pledge.create(project_id: p.id, min_amount: 150, delivery_date: '01.09.2013', description: 'STUDIO TOUR and 4-COLOR DELUXE PRINT You''ll receive one 4-color deluxe print, the digital wallpaper and an opportunity to cast your vote for the next card. In addition, I''ll give you a tour of my studio in Northeast Minneapolis, let you see the press in action and answer any questions you have. (You are responsible for all travel and lodging arrangements.)')
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-06').id, amount_backers: 1, amount_pledged: 7)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-07').id, amount_backers: 3, amount_pledged: 47)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-08').id, amount_backers: 5, amount_pledged: 159)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-09').id, amount_backers: 7, amount_pledged: 279)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-10').id, amount_backers: 12, amount_pledged: 394)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-11').id, amount_backers: 13, amount_pledged: 521)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-12').id, amount_backers: 15, amount_pledged: 615)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-13').id, amount_backers: 17, amount_pledged: 713)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-14').id, amount_backers: 19, amount_pledged: 859)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-15').id, amount_backers: 21, amount_pledged: 947)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-16').id, amount_backers: 23, amount_pledged: 1028)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-17').id, amount_backers: 24, amount_pledged: 1079)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-18').id, amount_backers: 25, amount_pledged: 1097)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-19').id, amount_backers: 26, amount_pledged: 1105)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-20').id, amount_backers: 28, amount_pledged: 1132)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-21').id, amount_backers: 29, amount_pledged: 1159)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-22').id, amount_backers: 30, amount_pledged: 1164)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-23').id, amount_backers: 31, amount_pledged: 1174)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-24').id, amount_backers: 32, amount_pledged: 1194)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-25').id, amount_backers: 33, amount_pledged: 1201)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-26').id, amount_backers: 34, amount_pledged: 1217)
+Daily.create(project_id: p.id, push_date_id: PushDate.find_by_push_date('2013-08-27').id, amount_backers: 35, amount_pledged: 1226)
