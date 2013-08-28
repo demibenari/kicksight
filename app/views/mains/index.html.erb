@@ -6,7 +6,6 @@
       <div class="containerF text1">
         <form>
           <input type="text" name="searchP">
-          <img src="<%= path_to_asset('bg.png') %>"/>
           </input>
         </form>
       </div>
@@ -27,18 +26,21 @@
   <div class="frontView center">
     <div class="mainContent">
       <h3 class="header center">Welcome!</h3>
-      <div class="tab" ng-click="changeView(1)">All</div>
-      <div class="tab" ng-click="changeView(2)">Project</div>
-      <div class="tab" ng-click="changeView(3)">Daily</div>
-      <div class="tab" ng-click="changeView(4)">Total</div>
-      <div class="content center" style='"display:{{view1VisibilityMode}}"'>
+      <div class='tabs_container'>
+        <div class="tab" ng-click="changeView(1)">All</div>
+        <div class="tab" ng-click="changeView(2)">Project</div>
+        <div class="tab" ng-click="changeView(3)">Daily</div>
+        <div class="tab" ng-click="changeView(4)">Total</div>
+      </div>
+        <div class="content center" style='"display:{{view1VisibilityMode}}"'>
+
         <ul class="unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
             <a target="_blank" href="{{project.project_link}}">
             <div class="frame till">
               <div class="innerFrame white">
-                <img src="{{project.picture_link}}" width="200" height="125"/>
+                <img src='{{project.picture_link}}' width="200" height="125"/>
               </div>
               <div class="wrap">
                 <div class="title white">{{project.name}}</div>
