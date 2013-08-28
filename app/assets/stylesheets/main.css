@@ -132,6 +132,7 @@ input[name=searchP] {
     box-shadow: 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94;
     border-radius: 7px;
     margin-bottom:50px;
+    clear: both
 }
 iframe {
     background-color: white;
@@ -145,5 +146,9 @@ ul {
     height: 30px;
     border: 1px solid grey;
     cursor: pointer;
-    color: #808080;
+    color: #452047;
+    float: left;
+    margin: 3px;
+    text-align: center;
+    line-height: 30px;
 }

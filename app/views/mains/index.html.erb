@@ -27,11 +27,11 @@
   <div class="frontView center">
     <div class="mainContent">
       <h3 class="header center">Welcome!</h3>
-      <div class="tab" onclick="{{changeView(1)}}"></div>
-      <div class="tab" onclick="{{changeView(2)}}"></div>
-      <div class="tab" onclick="{{changeView(3)}}"></div>
-      <div class="tab" onclick="{{changeView(4)}}"></div>
-      <div class="content center" style="{{view1VisibilityMode}}">
+      <div class="tab" ng-click="changeView(1)">All</div>
+      <div class="tab" ng-click="changeView(2)">Project</div>
+      <div class="tab" ng-click="changeView(3)">Daily</div>
+      <div class="tab" ng-click="changeView(4)">Total</div>
+      <div class="content center" style='"display:{{view1VisibilityMode}}"'>
         <ul class="unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
