@@ -12,6 +12,11 @@ gem 'nokogiri', '~> 1.6.0'
 gem 'composite_primary_keys', '~>6.0.0'
 gem 'clockwork'
 
+group :production do
+  gem 'rails_12factor' # Heroku gem that enables static assets and logging for heroku
+  gem 'unicorn' # For running the Heroku instance with unicorn
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
