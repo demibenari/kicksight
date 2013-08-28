@@ -35,6 +35,7 @@
         <ul class="unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
+            <a target="_blank" href="{{project.project_link}}">
             <div class="frame till">
               <div class="innerFrame white">
                 <img src="{{project.picture_link}}" width="200" height="125"/>
@@ -44,6 +45,7 @@
                 <div class="total white {{color(project)}}">{{project.percent}}%</div>
               </div>
             </div>
+            </a>
           </li>
         </ul>
       </div>
