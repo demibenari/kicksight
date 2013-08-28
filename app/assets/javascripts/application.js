@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-resource
-//= require mains
+//= require_tree .
