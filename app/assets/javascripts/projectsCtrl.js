@@ -64,9 +64,9 @@ angular.module('google-chart-sample', ['googlechart.directives']).controller("Pr
 
   */
 function ProjectsCtrl($scope, $resource) {
-
     var _view = 1;
-    $scope.view1VisibilityMode = _view === 1 ? "block" : "none";
+    $scope.view1VisibilityMode = "display:block";
+    //$scope.view1VisibilityMode = _view === 1 ? "block" : "none";
     $scope.view2VisibilityMode = _view === 2 ? "block" : "none";
     $scope.view3VisibilityMode = _view === 3 ? "block" : "none";
     $scope.view4VisibilityMode = _view === 4 ? "block" : "none";

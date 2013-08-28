@@ -31,7 +31,7 @@
       <div class="tab" onclick="{{changeView(2)}}"></div>
       <div class="tab" onclick="{{changeView(3)}}"></div>
       <div class="tab" onclick="{{changeView(4)}}"></div>
-      <div class="content center" style="display:{{view1VisibilityMode}}">
+      <div class="content center" style="{{view1VisibilityMode}}">
         <ul class="unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
