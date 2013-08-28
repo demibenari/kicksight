@@ -1,12 +1,12 @@
 angular.module('KickSight', ['ngResource']);
 
-
+/*
 google.setOnLoadCallback(function () {
     angular.bootstrap(document.body, ['google-chart-sample']);
 });
 google.load('visualization', '1', {packages: ['corechart']});
-
-_getProjectData = function (id) {
+   */
+var _getProjectData = function (id) {
     var _projectData = $resource('../mains/daily_project_points/:projectID/:dates', [
         {projectID: id}, {dates: true}
     ]);
