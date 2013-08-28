@@ -1,4 +1,4 @@
-<div ng-controller="ProjectsCtrl">
+<div>
   <div class="banner">
     <div class="logoContainer">
       <div class="logoImg">Kick<span>Sight</span></div>
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="frontView center">
-    <div class="mainContent">
+    <div class="mainContent" ng-controller="ProjectsCtrl">
       <h3 class="header center">Welcome!</h3>
       <div class='tabs_container'>
         <div class="tab" ng-click="changeView(1)">All</div>
@@ -32,8 +32,7 @@
         <div class="tab" ng-click="changeView(3)">Daily</div>
         <div class="tab" ng-click="changeView(4)">Total</div>
       </div>
-        <div class="content center" style='"display:{{view1VisibilityMode}}"'>
-
+        <div class="content center" style="display:{{view1VisibilityMode}}">
         <ul class="unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
@@ -51,13 +50,20 @@
           </li>
         </ul>
       </div>
-      <div ng-cloak="" ng-controller="ProjectGraphCtrl">
-        <div>
-          <h2>{{project.name}}</h2>
-          <div google-chart chart="chart" style='"{{chart.cssStyle}}"'/>
+    </div>
+    <div style="display: block;">
+      <div class="content center">
+        <div ng-cloak="" ng-controller="ProjectGraphCtrl">
+          <div>
+            <div google-chart chart="chart" style="{{chart.cssStyle}}"/>
+          </div>
         </div>
       </div>
     </div>
     </div>
   </div>
 </div>
+<script src="//www.google.com/jsapi"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+<script src="ng-google-chart.js"></script>

@@ -1,11 +1,5 @@
 angular.module('KickSight', ['ngResource']);
 
-/*
-google.setOnLoadCallback(function () {
-    angular.bootstrap(document.body, ['google-chart-sample']);
-});
-google.load('visualization', '1', {packages: ['corechart']});
-   */
 var _getProjectData = function (id) {
     var _projectData = $resource('../mains/daily_project_points/:projectID/:dates', [
         {projectID: id}, {dates: true}
@@ -20,14 +14,69 @@ var _getProjectData = function (id) {
     });
     return tables;
 };
-/*
+google.setOnLoadCallback(function () {
+    angular.bootstrap(document.body, ['google-chart-sample']);
+});
+google.load('visualization', '1', {packages: ['corechart']});
+
 angular.module('google-chart-sample', ['googlechart.directives']).controller("ProjectGraphCtrl", function ($scope) {
 
     var chart1 = {};
+    $scope.view1VisibilityMode = (_view === 1 ? "table" : "none");
+    $scope.view2VisibilityMode = (_view === 2 ? "block" : "none");
+    $scope.view3VisibilityMode = (_view === 3 ? "block" : "none");
+    $scope.view4VisibilityMode = (_view === 4 ? "block" : "none");
+
     chart1.type = "LineChart";
     chart1.displayed = false;
     chart1.cssStyle = "height:600px; width:100%;";
-    chart1.data = table1;
+    chart1.data = {"cols": [
+        {id: "month", label: "Month", type: "string"},
+        {id: "goal-id", label: "Goal", type: "number"},
+        {id: "pledges-id", label: "Pledges", type: "number"}
+    ], "rows": [
+        {c: [
+            {v: "20-8-13"},
+            {v: 17},
+            {v: 1, f: "1 new pledges"}
+        ]},
+        {c: [
+            {v: "20-8-14"},
+            {v: 17},
+            {v: 2, f: "1 new pledges"}
+        ]},
+        {c: [
+            {v: "20-8-15"},
+            {v: 17},
+            {v: 3}
+
+        ]},
+        {c: [
+            {v: "20-8-17"},
+            {v: 17},
+            {v: 4, f: "1 pledges"}
+        ]},
+        {c: [
+            {v: "20-8-18"},
+            {v: 17},
+            {v: 8, f: "1 pledges"}
+        ]},
+        {c: [
+            {v: "20-8-19"},
+            {v: 17},
+            {v: 12, f: "1 pledges"}
+        ]},
+        {c: [
+            {v: "20-8-20"},
+            {v: 17},
+            {v: 15, f: "1 pledges"}
+        ]},
+        {c: [
+            {v: "20-8-21"},
+            {v: 17},
+            {v: 20, f: "1 pledges"}
+        ]},
+    ]};
 
     chart1.options = {
         "title": "Total pledges",
@@ -48,7 +97,7 @@ angular.module('google-chart-sample', ['googlechart.directives']).controller("Pr
         "colors": ["lightgreen","pink"]
     };
 
-    $scope.chart1 = chart1;
+    $scope.chart = chart1;
 
     $scope.hideServer = false;
     $scope.selectionChange = function () {
@@ -61,20 +110,18 @@ angular.module('google-chart-sample', ['googlechart.directives']).controller("Pr
 
 });
 
-
-  */
 function ProjectsCtrl($scope, $resource) {
     var _view = 1;
-    $scope.view1VisibilityMode = _view === 1 ? "block" : "none";
-    $scope.view2VisibilityMode = _view === 2 ? "block" : "none";
-    $scope.view3VisibilityMode = _view === 3 ? "block" : "none";
-    $scope.view4VisibilityMode = _view === 4 ? "block" : "none";
+    $scope.view1VisibilityMode = (_view === 1 ? "table" : "none");
+    $scope.view2VisibilityMode = (_view === 2 ? "block" : "none");
+    $scope.view3VisibilityMode = (_view === 3 ? "block" : "none");
+    $scope.view4VisibilityMode = (_view === 4 ? "block" : "none");
 
     var _projects = $resource('../mains/get_projects');
 
     $scope.projects = _projects.query();
     $scope.color = function (project) {
-        return project.pledges > (project.goal * 0.5) ? 'green' : 'red';
+        return (Math.round(project.current / project.goal * 100) > 50 ? 'green' : 'red');
     }
 
     $scope.percent = function () {
@@ -89,10 +136,10 @@ function ProjectsCtrl($scope, $resource) {
           else if (view === 3) _view = 3
           else if (view === 4) _view = 4;
 
-        $scope.view1VisibilityMode = _view === 1 ? "block" : "none";
-        $scope.view2VisibilityMode = _view === 2 ? "block" : "none";
-        $scope.view3VisibilityMode = _view === 3 ? "block" : "none";
-        $scope.view4VisibilityMode = _view === 4 ? "block" : "none";
+        $scope.view1VisibilityMode = (_view === 1 ? "table" : "none");
+        $scope.view2VisibilityMode = (_view === 2 ? "block" : "none");
+        $scope.view3VisibilityMode = (_view === 3 ? "block" : "none");
+        $scope.view4VisibilityMode = (_view === 4 ? "block" : "none");
     };
     $scope.remaining = function () {
         var count = 0;
@@ -101,4 +148,4 @@ function ProjectsCtrl($scope, $resource) {
         });
         return count;
     };
-};
+}
