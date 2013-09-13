@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="ProjectsCtrl">
   <div class="banner">
     <div class="logoContainer">
       <div class="logoImg">Kick<span>Sight</span></div>
@@ -32,7 +32,7 @@
         <div class="tab" ng-click="changeView(3)">Daily</div>
         <div class="tab" ng-click="changeView(4)">Total</div>
       </div>
-        <div class="content center" style="display:{{view1VisibilityMode}}">
+        <div class="content center" style='"display:{{view1VisibilityMode}}"'>
         <ul class="unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
@@ -63,7 +63,7 @@
     </div>
   </div>
 </div>
-<script src="//www.google.com/jsapi"></script>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
-<script src="ng-google-chart.js"></script>
+<!-- <script src="ng-google-chart.js"></script> -->

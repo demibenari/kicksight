@@ -14,6 +14,7 @@ var _getProjectData = function (id) {
     });
     return tables;
 };
+
 google.setOnLoadCallback(function () {
     angular.bootstrap(document.body, ['google-chart-sample']);
 });
@@ -97,7 +98,7 @@ angular.module('google-chart-sample', ['googlechart.directives']).controller("Pr
         "colors": ["lightgreen","pink"]
     };
 
-    $scope.chart = chart1;
+    $scope.chart1 = chart1;
 
     $scope.hideServer = false;
     $scope.selectionChange = function () {
@@ -110,6 +111,8 @@ angular.module('google-chart-sample', ['googlechart.directives']).controller("Pr
 
 });
 
+
+
 function ProjectsCtrl($scope, $resource) {
     var _view = 1;
     $scope.view1VisibilityMode = (_view === 1 ? "table" : "none");
@@ -121,6 +124,7 @@ function ProjectsCtrl($scope, $resource) {
 
     $scope.projects = _projects.query();
     $scope.color = function (project) {
+        /*   return project.pledges > (project.goal * 0.5) ? 'green' : 'red';*/
         return (Math.round(project.current / project.goal * 100) > 50 ? 'green' : 'red');
     }
 
@@ -148,4 +152,4 @@ function ProjectsCtrl($scope, $resource) {
         });
         return count;
     };
-}
+};
