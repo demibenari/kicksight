@@ -18,7 +18,7 @@ ul {
 
 }
 li {
-    margin: 2.5%;
+    margin: 15px;
     width: 30%;
     float: left;
     text-align: center;
@@ -36,50 +36,42 @@ li h3 {
     background-color: white;
 }
 .frame {
-    width: 250px;
     height: 200px;
     position: relative;
+    width: 250px;
+    border-radius: 14px;
 }
 .innerFrame {
     width: 200px;
     height: 125px;
     position: relative;
     top: 15px;
-    left:25px;
+    left: 25px;
+    border: 2px solid grey;
 }
 .wrap {
     position: relative;
     display: block;
     top: 30px;
+    color: #452047;
 }
 .title {
     width: 125px;
     height: 30px;
     position: relative;
-    left: 25px;
+    font-size: 12px;
+    overflow: hidden;
     display: inline-block;
+    left: -35px;
 }
 .total {
-    width: 65px;
     height: 30px;
-    position: relative;
+    width: 65px;
     display: inline-block;
-    left: 30px;
+    position: absolute;
+    left: 160px;
+    line-height: 30px;
 }
 [ng-cloak] {
     display: none;
-}
-
-body {
-    padding: 20px;
-    padding-top: 60px;
-    padding-bottom: 40px;
-}
-
-table td.number {
-    text-align: right;
-}
-
-.navbar-fixed-top {
-    z-index: 1111;
 }
