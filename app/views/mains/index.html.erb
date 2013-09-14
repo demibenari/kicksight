@@ -1,5 +1,4 @@
 <!-- <div ng-controller="ProjectsCtrl"> -->
-<script src="js/index.js" type="text/javascript" language="JavaScript"></script>
 <div >
   <div class="banner">
     <div class="logoContainer">
@@ -50,12 +49,11 @@
               </a>
               </div>
               <div class="wrap">
-                <div class="title white" ng-click="openGraph(project)" >{{project.name}}</div>
+                <div class="title white" >{{project.name}}</div>
                 <div class="total white {{color(project)}}">{{project.percent}}%</div>
               </div>
-              <div class="selectionToggle">
-                <input type="button" value="Toggle view" onclick="toggleView(this)">
-              </div>
+              <a class="btn" href="" ng-click="openGraph(project)" >
+                 <i class="icon-compass icon-2x"></i> Graph</a>
             </div>
           </li>
         </ul>
