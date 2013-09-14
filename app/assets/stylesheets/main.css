@@ -206,4 +206,14 @@ iframe {
     -webkit-transform: scale(1.4) rotate(-10deg);
 }
 
+.categories{width:100%; display:inline-block;}
+.categories ul {width:100%; display:inline-block; transform:translateX(-30px); -webkit-transform:translateX(-30px);}
+.categories ul li{font-size:small; width:7%;  border-top:0.2em solid blue; margin:0; transition: all 1s ease;-webkit-transition: all 1s ease;}
+
+.categories ul li:hover
+{
+    border-top:0.2em solid #224f95; cursor:pointer;
+    transform:scaleX(1.4) rotateX(360deg); -webkit-transform:scaleX(1.4) rotateX(360deg);
+}
+
 
