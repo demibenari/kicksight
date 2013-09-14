@@ -1,25 +1,3 @@
-angular.module('KickSight', ['ngResource']);
-
-var _getProjectData = function (id) {
-    var _projectData = $resource('../mains/daily_project_points/:projectID/:dates', [
-        {projectID: id}, {dates: true}
-    ]);
-    var _projectTable = _projectData.query();
-    var table1 = {"cols": [
-        {id: "goal-id", label: "Goal", type: "number"},
-        {id: "pledges-id", label: "Daily Total Pledges", type: "number"}
-    ], "rows": []};
-    angular.forEach(_projectTable, function (p) {
-        table1.rows.push({c: [{v:"date"},{v:"total"},{v:"today's pledges"}]})
-    });
-    return tables;
-};
-
-google.setOnLoadCallback(function () {
-    angular.bootstrap(document.body, ['google-chart-sample']);
-});
-google.load('visualization', '1', {packages: ['corechart']});
-
 angular.module('google-chart-sample', ['googlechart.directives']).controller("ProjectGraphCtrl", function ($scope) {
 
     var chart1 = {};
@@ -112,8 +90,7 @@ angular.module('google-chart-sample', ['googlechart.directives']).controller("Pr
 });
 
 
-
-function ProjectsCtrl($scope, $resource) {
+angular.module('KickSight', ['ngResource', 'google-chart-sample']).controller('ProjectsCtrl', function ($scope, $resource) {
     var _view = 1;
     $scope.view1VisibilityMode = (_view === 1 ? "table" : "none");
     $scope.view2VisibilityMode = (_view === 2 ? "block" : "none");
@@ -152,4 +129,27 @@ function ProjectsCtrl($scope, $resource) {
         });
         return count;
     };
+});
+
+var _getProjectData = function (id) {
+    var _projectData = $resource('../mains/daily_project_points/:projectID/:dates', [
+        {projectID: id}, {dates: true}
+    ]);
+    var _projectTable = _projectData.query();
+    var table1 = {"cols": [
+        {id: "goal-id", label: "Goal", type: "number"},
+        {id: "pledges-id", label: "Daily Total Pledges", type: "number"}
+    ], "rows": []};
+    angular.forEach(_projectTable, function (p) {
+        table1.rows.push({c: [{v:"date"},{v:"total"},{v:"today's pledges"}]})
+    });
+    return tables;
 };
+
+
+google.setOnLoadCallback(function () {
+    angular.bootstrap(document.body, ['KickSight']);
+});
+google.load('visualization', '1', {packages: ['corechart']});
+
+
