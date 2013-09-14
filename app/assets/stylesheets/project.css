@@ -1,5 +1,9 @@
 /* This page was full of stuff like color:red, never use this! use the hex or rgb representation as in color: #F00/rgb(255,0,0) ->red */
 
+
+
+
+
 .pledge-total {
     color: #109a29;
 }
@@ -36,9 +40,8 @@ li h3 {
     background-color: #FFF;
 }
 .frame {
-    height: 200px;
-    position: relative;
-    width: 250px;
+    height: 100%;
+    width: 100%;
     border-radius: 5px 0px 14px 14px;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
@@ -50,37 +53,37 @@ li h3 {
     -webkit-transform: scale(1.4);
 }
 
-.innerFrame {
-    width: 200px;
-    height: 125px;
-    position: relative;
-    top: 15px;
-    left: 25px;
+.innerFrame
+{
+    width: 80%;
+    height: 60%;
     border: 2px solid grey;
+    display:inline-block;
 }
 .wrap {
-    position: relative;
-    display: block;
-    top: 30px;
+    display: inline-block;
+    width: 80%;
     color: #000;
 }
+.wrap div{}
+
 .title {
     width: 125px;
     height: 30px;
-    position: relative;
     font-size: 12px;
     overflow: hidden;
-    display: inline-block;
-    left: -35px;
+    float:left;
 }
 .total {
-    height: 30px;
-    width: 65px;
     display: inline-block;
-    position: absolute;
-    left: 160px;
     line-height: 30px;
+    float:right;
 }
+
+.projects li{width:28%;height:250px;}
+.selectedProject{width:90%;height:500px;}
+.projects li img{width:100%;height:100%; border:1px solid black;}
+
 [ng-cloak] {
     display: none;
 }

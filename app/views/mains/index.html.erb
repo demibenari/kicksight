@@ -52,17 +52,20 @@
           <li>Hover me!</li>
         </ul>
       </div>
-        <ul class="unstyled">
+        <ul class="projects unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
             <a target="_blank" href="{{project.project_link}}">
             <div class="frame till">
               <div class="innerFrame white">
-                <img ng-src='{{project.picture_link}}' width="200" height="125"/>
+                <img ng-src='{{project.picture_link}}' />
               </div>
               <div class="wrap">
                 <div class="title white">{{project.name}}</div>
                 <div class="total white {{color(project)}}">{{project.percent}}%</div>
+              </div>
+              <div class="selectionToggle">
+                <input type="button">
               </div>
             </div>
             </a>
