@@ -1,3 +1,9 @@
+/*
+ Dear Demi, All of the comments here are for you understanding.
+ normally i would now put those here, but since you'r new to CSS i thought it would help..
+*/
+
+
 @font-face {
     font-family: "Helsinki";
     src: url("helsinki.ttf") format("truetype");
@@ -11,12 +17,17 @@ body   {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #452047 no-repeat;
+    background: #FFF no-repeat;
     z-index:1;
 }
 .center {
+    /*
     margin-left: auto;
     margin-right: auto;
+
+    I'm living this here so you can how NOT to center
+    */
+    margin: 0 auto;
     display:block;
 }
 .text1  {
@@ -30,28 +41,21 @@ body   {
     width: 100%;
     z-index:3;
 }
-.logoContainer {
+.logoContainer
+{
     display: block;
     width: 100%;
-    height: 100px;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 0 1.7em #888
 }
-.logoImg    {
-    position:relative;
-    height: 75%;
-    margin-left:1%;
-    font: 4.25em "Helsinki", Arial, Helvetica, sans-serif;
-    color: #95E4D7;
-    text-shadow: 0 0 0.5em #330033, 0 0 0.2em #330033, 0 0 0.2em #330033;
+.logoContainer div {margin: 0 auto; /*Centering the correct way*/}
+
+.logoImg
+{
+    background-image: url("/images/logo.png");
+    width: 472px; height: 151px;
 }
-.logoImg span  {
-    font-style: italic;
-}
-.logoMoto   {
-    float: left;
-    margin-left:2%;
-    margin-right:10px;
-    text-align: left;
-}
+
 .containerF{
     float:right;
     margin-right:20px;
@@ -66,48 +70,54 @@ input[name=searchP] {
     color: #F3FEAE;
 }
 .menuContainer {
-    width:305px;
+    width:302px;
 }
 
 .menul {
-    padding:0;
-    margin:0;
-    background-color:#452047;
-    list-style-type:none;
-    overflow:hidden;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: #266ec2;
+    margin-bottom: 2px;
+    height: 30px;
+
 }
-.menul li {
-    float:left;
+.menul a
+{
+    width: 100px;
+    display: block;
+    float: left;
+    padding: 5px 0 5px 0;
+    margin: 0; /* Overriding default of 15, Need to check why is it default...*/
+    text-align: center;
+    color: #000;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.menul a:hover
+{
+    color: #fff;
+    background: #224f95;
+    cursor: pointer;
+    transform: scale(2) rotate(30deg) translate(50px);
+    z-index: 1000;
 }
 .subMenu {
     display:none;
 }
-.menul a  {
+.menul li a
+{
     display: table-cell;
-    width:100px;
     height:26px;
-    text-decoration:none;
     text-align:center;
     vertical-align: middle;
-    border-right: 1px solid #F3FEAE;
+    color: #000;
 }
 
-.menul a:hover, a:active {
-    text-decoration:none;
-    border-radius: 5px;
-    background: linear-gradient(to bottom, #febbbb 0%,#fe9090 45%,#ED8A94 100%); /* W3C */
-    color: #F3FEAE;
-    cursor: pointer;
-    border-right:none;
-}
 .frontView  {
     display: block;
-    width:85%;
-    z-index:2;
     border-radius: 5px;
-    background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 66%,#ffffff 100%); /* W3C */
+    background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 65%,#f6f6f6 100%);
     box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
 }
 .mainContent {
@@ -120,17 +130,16 @@ input[name=searchP] {
     position:relative;
     top:15px;
     font:2.5em "Helsinki", Arial, Helvetica, sans-serif;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
-    color: #611543;
-    text-shadow: 0 0 0.5em #95E4D7, 0 0 0.2em black, 0 0 0.2em #95E4D7;
+    color: #224f95;
+    text-shadow: 0 0 0.5em #888, 0 0 0.2em black, 0 0 0.2em #888;
 }
 .content    {
-    width:90%;
-    height:100px;
-    border: 1px solid #ED8A94;
+    width:960px; /* Standard for 17' screens will work on most resolutions..  */
+    border: 1px solid #000;
     background: white;
-    box-shadow: 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94;
+    box-shadow: -7px 5px 7px 5px #888, 7px 5px 7px 0px #888;
     border-radius: 7px;
     margin-bottom:50px;
     clear: both;
@@ -139,34 +148,31 @@ input[name=searchP] {
 iframe {
     background-color: white;
 }
-ul {
-    list-style: none;
-}
 
-.tab {
-    width: 100px;
-    height: 30px;
-    border: 1px solid grey;
-    cursor: pointer;
-    color: #452047;
-    float: left;
-    margin: 3px;
+.tabs_container
+{
     text-align: center;
-    line-height: 30px;
+    width:600px;
+}
+.tab
+{
+    width: 140px;
+    height: 30px;
+    border: 1px dotted #000;
+    border-radius: 5px;
+    cursor: pointer;
+    float:left;
+    margin: 4px 4px 5px 0; /* Easy way of remembering this is TRouBLe (Top,Right,Bottom,Left) or just clock wise.. */
+    line-height: 2;
+    transition: all 1s ease;
 }
 
 
-.tab:hover {
-    background-color: #452047;
+.tab:hover
+{
+    background-color: #224f95;
     color: #F9F9F9;
+    transform: scale(1.4) rotate(-10deg);
 }
 
 
-.tabs_container {
-    margin-bottom: 15px;
-    clear:both;
-    width:100%;
-    position: relative;
-    left: 30%;
-    float: left;
-}
