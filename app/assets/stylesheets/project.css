@@ -47,12 +47,6 @@ li h3 {
     -webkit-transition: all 1s ease;
 }
 
-.frame:hover
-{
-    transform: scale(1.4);
-    -webkit-transform: scale(1.4);
-}
-
 .innerFrame
 {
     width: 80%;
@@ -79,10 +73,40 @@ li h3 {
     line-height: 30px;
     float:right;
 }
-
-.projects li{width:28%;height:250px;}
+.projects li{transition: all 1s ease; -webkit-transition: all 1s ease;}
+.project{width:28%;height:250px;}
+.project:hover
+{
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+}
 .selectedProject{width:90%;height:500px;}
 .projects li img{width:100%;height:100%; border:1px solid black;}
+
+
+.selectionToggle input[type="button"]{
+    -webkit-box-shadow:inset 0 1px 0 0 #bee2f9;
+    box-shadow:inset 0 1px 0 0 #bee2f9;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+    background:-moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+    background-color:#63b8ee;
+    border-radius:100px;
+    border:1px solid #3866a3;
+    display:inline-block;
+    color:#14396a;
+    font-family:David;
+    font-size:15px;
+    font-weight:bold;
+    width:80%;
+    height:30px;
+    text-shadow:1px 1px 0 #7cacde;
+}
+.selectionToggle input[type="button"]:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+    background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+    background-color:#468ccf;
+}
+
 
 [ng-cloak] {
     display: none;

@@ -1,4 +1,23 @@
 <!-- <div ng-controller="ProjectsCtrl"> -->
+<script>
+    function toggleView(button)
+    {
+        var li = jQuery(button).closest('li').eq(0);
+        var selectedProjectClass = "selectedProject";
+        var projectClass = "project";
+
+        if (li.hasClass(selectedProjectClass))
+        {
+            li.removeClass(selectedProjectClass);
+            li.addClass(projectClass);
+        }
+        else
+        {
+            li.removeClass(projectClass);
+            li.addClass(selectedProjectClass);
+        }
+    }
+</script>
 <div >
   <div class="banner">
     <div class="logoContainer">
@@ -15,10 +34,6 @@
             <a>Home</a>
             <a>Sign In</a>
             <a>Projects</a>
-<!--              <ul class="menul subMenu">
-                <li><a>Most Successful</a></li>
-                <li><a>Failors</a></li>
-              </ul>-->
           </nav>
         </div>
     </div>
@@ -54,8 +69,7 @@
       </div>
         <ul class="projects unstyled">
           {{percent()}}
-          <li class="" ng-repeat="project in projects">
-            <a target="_blank" href="{{project.project_link}}">
+          <li class="project" ng-repeat="project in projects">
             <div class="frame till">
               <div class="innerFrame white">
                 <img ng-src='{{project.picture_link}}' />
@@ -65,10 +79,9 @@
                 <div class="total white {{color(project)}}">{{project.percent}}%</div>
               </div>
               <div class="selectionToggle">
-                <input type="button">
+                <input type="button" value="Toggle view" onclick="toggleView(this)">
               </div>
             </div>
-            </a>
           </li>
         </ul>
       </div>

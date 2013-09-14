@@ -122,6 +122,7 @@ angular.module('KickSight', ['ngResource', 'google-chart-sample']).controller('P
         $scope.view3VisibilityMode = (_view === 3 ? "block" : "none");
         $scope.view4VisibilityMode = (_view === 4 ? "block" : "none");
     };
+
     $scope.remaining = function () {
         var count = 0;
         angular.forEach($scope.projectData.projectPledges, function (projectData) {
