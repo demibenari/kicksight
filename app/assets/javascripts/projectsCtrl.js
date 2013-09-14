@@ -149,7 +149,7 @@ app.controller('ProjectsCtrl', function($scope, $resource, $http, $modal) {
     var Projects = $resource('../mains/get_projects');
     $scope.getProjects = function(category) {
         if ( category ){
-            $scope.projects = Projects.query({category_id : category.id});
+            $scope.projects = Projects.query({cat_id : category.id});
         }else{ 
             $scope.projects = Projects.query();
         }
