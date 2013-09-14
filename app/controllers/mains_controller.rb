@@ -4,7 +4,10 @@ require 'actionpack/action_caching'
 class MainsController < ApplicationController
   include MainsHelper
 
-  caches_action :get_projects, :get_all_categories, :get_all_dailies, :daily_project_points
+  caches_action :get_projects, :cache_path => Proc.new { |c| c.params }
+  caches_action :get_all_categories, :cache_path => Proc.new { |c| c.params }
+  caches_action :get_all_dailies, :cache_path => Proc.new { |c| c.params }
+  caches_action :daily_project_points, :cache_path => Proc.new { |c| c.params }
 
   #
   # The index returns the main page of the application
