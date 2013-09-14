@@ -16,3 +16,4 @@
 //= require angular
 //= require angular-resource
 //= require ng-google-chart
+//= require projectsCtrl

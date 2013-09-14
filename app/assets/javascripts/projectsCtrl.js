@@ -1,13 +1,13 @@
 angular.module('google-chart-sample', ['googlechart.directives']).controller("ProjectGraphCtrl", function ($scope) {
 
-    var chart1 = {};
+    var chart1 = {}, _view =1;
     $scope.view1VisibilityMode = (_view === 1 ? "table" : "none");
     $scope.view2VisibilityMode = (_view === 2 ? "block" : "none");
     $scope.view3VisibilityMode = (_view === 3 ? "block" : "none");
     $scope.view4VisibilityMode = (_view === 4 ? "block" : "none");
 
     chart1.type = "LineChart";
-    chart1.displayed = false;
+    chart1.displayed = true;
     chart1.cssStyle = "height:600px; width:100%;";
     chart1.data = {"cols": [
         {id: "month", label: "Month", type: "string"},
