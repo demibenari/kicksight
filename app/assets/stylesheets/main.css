@@ -206,7 +206,7 @@ iframe {
 
 .categories{width:100%; display:inline-block;}
 .categories ul {width:100%; display:inline-block; transform:translateX(-15px); -webkit-transform:translateX(-15px); margin-top:10px}
-.categories ul li{font-size:15px; width:7%;  border-top:0.2em solid blue; margin:0; transition: all 1s ease;-webkit-transition: all 1s ease;}
+.categories ul li{font-size:15px; width:7%;  border-top:0.2em solid blue; margin:0; transition: all 1s ease;-webkit-transition: all 1s ease; word-wrap:break-word;}
 
 .categories ul li:hover
 {
