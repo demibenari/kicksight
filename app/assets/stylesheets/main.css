@@ -216,10 +216,11 @@ iframe {
     transform:scaleX(1.4) rotateX(360deg); -webkit-transform:scaleX(1.4) rotateX(360deg);
 }
 
-.modal { 
+.modal
+{
  width : 1000px;
  height: 900px;
-
+ left:20%;
 }
 
 
