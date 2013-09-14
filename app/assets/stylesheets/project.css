@@ -39,8 +39,15 @@ li h3 {
     height: 200px;
     position: relative;
     width: 250px;
-    border-radius: 5px 0px 14px 14px
+    border-radius: 5px 0px 14px 14px;
+    transition: all 1s ease;
 }
+
+.frame:hover
+{
+    transform: scale(1.4);
+}
+
 .innerFrame {
     width: 200px;
     height: 125px;
