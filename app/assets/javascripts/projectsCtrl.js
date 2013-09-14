@@ -1,4 +1,4 @@
-angular.module('google-chart-sample', ['googlechart.directives']).controller("ProjectGraphCtrl", function ($scope) {
+angular.module('google-chart-sample', ['googlechart']).controller("ProjectGraphCtrl", function ($scope) {
 
     var chart1 = {}, _view =1;
     $scope.view1VisibilityMode = (_view === 1 ? "table" : "none");
@@ -76,7 +76,7 @@ angular.module('google-chart-sample', ['googlechart.directives']).controller("Pr
         "colors": ["lightgreen","pink"]
     };
 
-    $scope.chart1 = chart1;
+    $scope.chart = chart1;
 
     $scope.hideServer = false;
     $scope.selectionChange = function () {
@@ -147,9 +147,9 @@ var _getProjectData = function (id) {
 };
 
 
-google.setOnLoadCallback(function () {
-    angular.bootstrap(document.body, ['KickSight']);
-});
-google.load('visualization', '1', {packages: ['corechart']});
+// google.setOnLoadCallback(function () {
+//     angular.bootstrap(document.body, ['KickSight']);
+// });
+// google.load('visualization', '1', {packages: ['corechart']});
 
 
