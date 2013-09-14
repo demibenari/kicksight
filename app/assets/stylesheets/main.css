@@ -219,9 +219,13 @@ iframe {
 .modal
 {
     width : 1000px;
-    height: 900px;
+    height: 600px;
     left:20%;
     margin:0;
 }
 
+.modal-body
+{
+    max-height: 500px;
+}
 

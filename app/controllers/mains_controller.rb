@@ -26,7 +26,7 @@ class MainsController < ApplicationController
     if (!category_id.nil?)
       @projects = Project.where(category_id: category_id)
     else
-      @projects = Project.all().limit(5)
+      @projects = Project.all()
     end
 
     render_project(@projects, !include_unnormal_fields.nil?)

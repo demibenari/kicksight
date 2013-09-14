@@ -239,7 +239,7 @@ app.controller('ProjectsCtrl', function($scope, $resource, $http, $modal) {
         chart1.options = {
             "title": "Total pledges",
             "fill": 20,
-            "height": 700,
+            "height": 450,
             "displayExactValues": true,
             "vAxis": {
                 "title": "Total Pledges (in thousands $)",
