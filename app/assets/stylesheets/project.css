@@ -4,6 +4,7 @@
 
 
 
+
 .pledge-total {
     color: #109a29;
 }
@@ -67,11 +68,13 @@ li h3 {
     font-size: 12px;
     overflow: hidden;
     float:left;
+    line-height:2
 }
 .total {
     display: inline-block;
     line-height: 30px;
     float:right;
+    width:40px
 }
 .projects li{transition: all 1s ease; -webkit-transition: all 1s ease;}
 .project{width:28%;height:250px;}

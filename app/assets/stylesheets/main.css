@@ -154,14 +154,12 @@ body   {
     height: 100%;
 }
 .header {
-    position:relative;
-    top:15px;
     font:2.5em "Helsinki", Arial, Helvetica, sans-serif;
-    padding: 10px;
-    text-align: center;
     color: #224f95;
     text-shadow: 0 0 0.5em #888, 0 0 0.2em black, 0 0 0.2em #888;
     -webkit-text-shadow: 0 0 0.5em #888, 0 0 0.2em black, 0 0 0.2em #888;
+    text-align:center;
+    transform:translateX(-130px);
 }
 .content    {
     width:960px; /* Standard for 17' screens will work on most resolutions..  */
@@ -207,7 +205,7 @@ iframe {
 }
 
 .categories{width:100%; display:inline-block;}
-.categories ul {width:100%; display:inline-block; transform:translateX(-30px); -webkit-transform:translateX(-30px);}
+.categories ul {width:100%; display:inline-block; transform:translateX(-15px); -webkit-transform:translateX(-15px); margin-top:10px}
 .categories ul li{font-size:15px; width:7%;  border-top:0.2em solid blue; margin:0; transition: all 1s ease;-webkit-transition: all 1s ease;}
 
 .categories ul li:hover
@@ -217,9 +215,9 @@ iframe {
 }
 
 .modal { 
- width : 1000px;
+ width : 1200px;
  height: 900px;
 
- }
+}
 
 
