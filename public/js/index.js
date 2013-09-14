@@ -16,10 +16,12 @@ function toggleView(button)
     }
 }
 
+var evilGlobalVarOfDeath = 360;
 function spinBitch()
 {
-    $('body').css('-webkit-transform','rotate(360deg)');
-    $('body').css('transform','rotate(360deg)');
+    $('body').css('-webkit-transform','rotate(' + evilGlobalVarOfDeath + 'deg)');
+    $('body').css('transform','rotate(' + evilGlobalVarOfDeath + 'deg)');
+    evilGlobalVarOfDeath += 360;
 }
 
 $(document).ready(function()
