@@ -41,11 +41,13 @@ li h3 {
     width: 250px;
     border-radius: 5px 0px 14px 14px;
     transition: all 1s ease;
+    -webkit-transition: all 1s ease;
 }
 
 .frame:hover
 {
     transform: scale(1.4);
+    -webkit-transform: scale(1.4);
 }
 
 .innerFrame {

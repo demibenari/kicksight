@@ -46,7 +46,8 @@ body   {
     display: block;
     width: 100%;
     border-bottom: 1px solid #000;
-    box-shadow: 0 0 1.7em #888
+    box-shadow: 0 0 1.7em #888;
+    -webkit-box-shadow: 0 0 1.7em #888
 }
 .logoContainer div {margin: 0 auto; /*Centering the correct way*/}
 
@@ -65,6 +66,7 @@ input[name=searchP] {
     background-color: #452047;
     border:none;
     box-shadow: 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94;
+    -webkit-box-shadow: 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94;
     border-radius: 5px;
     outline-color:#ED8A94;
     color: #F3FEAE;
@@ -91,6 +93,7 @@ input[name=searchP] {
     text-align: center;
     color: #000;
     transition: all 1s ease;
+    -webkit-transition: all 1s ease;
     position: relative;
 }
 
@@ -100,6 +103,7 @@ input[name=searchP] {
     background: #224f95;
     cursor: pointer;
     transform: scale(2) rotate(30deg) translate(50px);
+    -webkit-transform: scale(2) rotate(30deg) translate(50px);
     z-index: 1000;
 }
 .subMenu {
@@ -119,6 +123,7 @@ input[name=searchP] {
     border-radius: 5px;
     background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 65%,#f6f6f6 100%);
     box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
+    -webkit-box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
 }
 .mainContent {
     position: relative;
@@ -134,12 +139,14 @@ input[name=searchP] {
     text-align: center;
     color: #224f95;
     text-shadow: 0 0 0.5em #888, 0 0 0.2em black, 0 0 0.2em #888;
+    -webkit-text-shadow: 0 0 0.5em #888, 0 0 0.2em black, 0 0 0.2em #888;
 }
 .content    {
     width:960px; /* Standard for 17' screens will work on most resolutions..  */
     border: 1px solid #000;
     background: white;
     box-shadow: -7px 5px 7px 5px #888, 7px 5px 7px 0px #888;
+    -webkit-box-shadow: -7px 5px 7px 5px #888, 7px 5px 7px 0px #888;
     border-radius: 7px;
     margin-bottom:50px;
     clear: both;
@@ -165,6 +172,7 @@ iframe {
     margin: 4px 4px 5px 0; /* Easy way of remembering this is TRouBLe (Top,Right,Bottom,Left) or just clock wise.. */
     line-height: 2;
     transition: all 1s ease;
+    -webkit-transition: all 1s ease;
 }
 
 
@@ -173,6 +181,7 @@ iframe {
     background-color: #224f95;
     color: #F9F9F9;
     transform: scale(1.4) rotate(-10deg);
+    -webkit-transform: scale(1.4) rotate(-10deg);
 }
 
 
