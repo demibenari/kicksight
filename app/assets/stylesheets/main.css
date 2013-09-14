@@ -216,4 +216,10 @@ iframe {
     transform:scaleX(1.4) rotateX(360deg); -webkit-transform:scaleX(1.4) rotateX(360deg);
 }
 
+.modal { 
+ width : 1200px;
+ height: 900px;
+
+ }
+
 

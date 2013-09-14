@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="KickSight">
 <head>
-  <title>Kicksight</title>
+ 	<title>Kicksight</title>`
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+ 	 <%= stylesheet_link_tag 'main', 'application', media: 'all'%>
+  	<%= javascript_include_tag 'application' %>
+  	<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
   
-  <%= stylesheet_link_tag 'main', 'application', media: 'all'%>
-  <%= javascript_include_tag 'application' %>
-  
-  <%= csrf_meta_tags %>
+  	<%= csrf_meta_tags %>
 
 </head>
 <body>
