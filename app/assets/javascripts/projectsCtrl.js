@@ -236,10 +236,10 @@ app.controller('ProjectsCtrl', function($scope, $resource, $http, $modal) {
         var chart1 = {};
         chart1.type = "LineChart";
         chart1.displayed = true;
-       chart1.cssStyle = "height:1100px; width:800px;";
         chart1.options = {
             "title": "Total pledges",
             "fill": 20,
+            "height": 700,
             "displayExactValues": true,
             "vAxis": {
                 "title": "Total Pledges (in thousands $)",
