@@ -26,7 +26,7 @@ class MainsController < ApplicationController
     if (!category_id.nil?)
       @projects = Project.where(category_id: category_id)
     else
-      @projects = Project.all
+      @projects = Project.find(:all, :limit => 5)
     end
 
     render_project(@projects, !include_unnormal_fields.nil?)
@@ -102,7 +102,7 @@ class MainsController < ApplicationController
   end
 
   def custom_asset_template_url(path)
-    return "http://localhost:3000/templates/#{path}"
+    return "http://localhost:3000/templates/#{path}" #TODO: Will this work on a remote server ?  Isn't it possible to use a relative url ?
   end
 
 end
