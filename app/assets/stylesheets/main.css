@@ -89,8 +89,8 @@ body   {
 
 .containerF input[type=text]:focus
 {
-    transform: scaleX(1.4) scaleY(2) translate(500px, 50px);
-    -webkit-transform: scaleX(1.4) scaleY(2) translate(500px, 50px);
+    transform: scaleX(1.4) scaleY(2) translate(50px,-20px) rotateX(360deg);
+    -webkit-transform: scaleX(1.4) scaleY(2) translate(50px,-20px) rotateX(360deg);
 }
 
 .menuContainer {
