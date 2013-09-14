@@ -1,7 +1,10 @@
 require 'trendline'
+require 'actionpack/action_caching'
 
 class MainsController < ApplicationController
   include MainsHelper
+
+  caches_action :get_projects, :get_all_categories, :get_all_dailies, :daily_project_points
 
   #
   # The index returns the main page of the application

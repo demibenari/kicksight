@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/rails/actionpack-action_caching.git
+  revision: a09d15f64fe110fa1342798abeeb5898c2d408ef
+  specs:
+    actionpack-action_caching (1.0.0)
+      actionpack (>= 4.0.0.beta, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -127,6 +134,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack-action_caching!
   clockwork
   coffee-rails (~> 4.0.0)
   composite_primary_keys (~> 6.0.0)

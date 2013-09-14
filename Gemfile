@@ -11,6 +11,7 @@ gem 'mysql2'
 gem 'nokogiri', '~> 1.6.0'
 gem 'composite_primary_keys', '~>6.0.0'
 gem 'clockwork'
+gem 'actionpack-action_caching', github: 'rails/actionpack-action_caching'
 
 group :production do
   gem 'rails_12factor' # Heroku gem that enables static assets and logging for heroku

@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   database: kicksightprod
-  pool: 5
+  pool: 10
   username: root
-  password: railsprod
-  hostname: kicksightprod.cmd5shpdhqmx.us-west-2.rds.amazonaws.com
+  password: rails
+  hostname: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
