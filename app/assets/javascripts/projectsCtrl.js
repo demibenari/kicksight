@@ -144,9 +144,18 @@ app.controller('ProjectsCtrl', function($scope, $resource, $http, $modal) {
     $scope.view3VisibilityMode = (_view === 3 ? "block" : "none");
     $scope.view4VisibilityMode = (_view === 4 ? "block" : "none");
 
-    var _projects = $resource('../mains/get_projects');
+    $scope.categories = $resource('../mains/get_all_categories').query();
 
-    $scope.projects = _projects.query();
+    var Projects = $resource('../mains/get_projects');
+    $scope.getProjects = function(category) {
+        if ( category ){
+            $scope.projects = Projects.query({category_id : category.id});
+        }else{ 
+            $scope.projects = Projects.query();
+        }
+    };
+
+    $scope.getProjects();
     $scope.color = function(project) {
         /*   return project.pledges > (project.goal * 0.5) ? 'green' : 'red';*/
         return (Math.round(project.current / project.goal * 100) > 50 ? 'green' : 'red');

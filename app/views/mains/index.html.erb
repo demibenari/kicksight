@@ -54,23 +54,11 @@
         <div class="content center" style='"display:{{view1VisibilityMode}}"'>
       <div class="categories">
         <ul>
-          <li>All</li>
-          <li>Art</li>
-          <li>Dance</li>
-          <li>Design</li>
-          <li>Film</li>
-          <li>DAvid</li>
-          <li>Was</li>
-          <li>Here</li>
-          <li>Yup</li>
-          <li>This</li>
-          <li>Is</li>
-          <li>A</li>
-          <li>Category</li>
-          <li>Hover me!</li>
+          <li ng-click="getProjects()">All</li>
+          <li ng-click="getProjects(category)" ng-repeat="category in categories">{{category.description}}</li>
         </ul>
       </div>
-        <ul class="projects unstyled">
+      <ul class="projects unstyled">
           {{percent()}}
           <li class="project" ng-repeat="project in projects | filter: search ">
             <div class="frame till">
@@ -90,8 +78,8 @@
           </li>
         </ul>
       </div>
-   <!--  </div>
-    <div style="display: block;">
+     </div>
+<!--     <div style="display: block;">
       <div class="content center">
         <div ng-cloak="" ng-controller="ProjectGraphCtrl">
           <div>
@@ -99,7 +87,6 @@
           </div>
         </div>
       </div>
-    </div>
-    </div>
-  </div>
+    </div>-->
+    </div> 
 </div>
