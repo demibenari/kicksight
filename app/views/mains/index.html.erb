@@ -24,8 +24,7 @@
       <div class="logoImg"></div>
       <div class="containerF text1">
         <form>
-            <input type="text" name="searchP" placeholder="What are you searching for?"/>
-          <input type="button" value="Search"/>
+            <input type="text" ng-model="search" name="searchP" placeholder="What are you searching for?"/>
         </form>
       </div>
 
@@ -73,7 +72,7 @@
       </div>
         <ul class="projects unstyled">
           {{percent()}}
-          <li class="project" ng-repeat="project in projects">
+          <li class="project" ng-repeat="project in projects | filter: search ">
             <div class="frame till">
               <div class="innerFrame white">
               <a target="_blank" href="{{project.project_link}}">
