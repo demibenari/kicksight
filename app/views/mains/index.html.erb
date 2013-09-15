@@ -55,24 +55,38 @@
         <ul class="projects unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
-            <a target="_blank" href="{{project.project_link}}">
+            
             <div class="frame till">
               <div class="innerFrame white">
-                <img ng-src='{{project.picture_link}}' />
+              <a target="_blank" href="{{project.project_link}}">
+                <img ng-src='{{project.picture_link}}' width="200" height="125"/>
+              </a>
               </div>
               <div class="wrap">
-                <div class="title white">{{project.name}}</div>
+                <div class="title white" ng-click="openGraph(project)" >{{project.name}}</div>
                 <div class="total white {{color(project)}}">{{project.percent}}%</div>
               </div>
               <div class="selectionToggle">
                 <input type="button">
               </div>
             </div>
-            </a>
+            
           </li>
         </ul>
       </div>
-    </div>
+    <script type="text/ng-template" id="ProjectGraph.html">
+        <div class="modal-header" >
+            <h3>{{project.name}} </h3>
+        </div>
+        <div class="modal-body">
+         <div google-chart chart="chart"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>        
+        </div>
+    </script>
+
+   <!--  </div>
     <div style="display: block;">
       <div class="content center">
         <div ng-cloak="" ng-controller="ProjectGraphCtrl">
@@ -82,6 +96,6 @@
         </div>
       </div>
     </div>
-    </div>
+    </div> -->
   </div>
 </div>
