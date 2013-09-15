@@ -256,6 +256,7 @@ app.controller('ProjectsCtrl', function($scope, $resource, $http, $modal) {
                 }
             },
             "colors": ["lightgreen", "pink"]
+
         };
          getProjectData(project.kick_id).then (function( chartData) {
 
