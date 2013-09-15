@@ -145,9 +145,9 @@ body   {
 .frontView  {
     display: block;
     border-radius: 5px;
-    background: -webkit-linear-gradient(bottom, rgb(92,127,184) 99%, rgb(255,255,255) 7%);
     box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
     -webkit-box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,0)), color-stop(15%,rgba(30,87,153,0.8)), color-stop(19%,rgba(30,87,153,1)), color-stop(20%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(80%,rgba(30,87,153,1)), color-stop(81%,rgba(30,87,153,1)), color-stop(85%,rgba(30,87,153,0.8)), color-stop(100%,rgba(30,87,153,0)));
 }
 .mainContent {
     position: relative;
@@ -158,6 +158,7 @@ body   {
 .header {
     font:2.5em "Helsinki", Arial, Helvetica, sans-serif;
     color: #224f95;
+    background: transparent;
     text-shadow: 0 0 0.5em #888, 0 0 0.2em black, 0 0 0.2em #888;
     -webkit-text-shadow: 0 0 0.5em #888, 0 0 0.2em black, 0 0 0.2em #888;
     text-align:center;
