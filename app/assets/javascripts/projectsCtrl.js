@@ -253,7 +253,7 @@ app.controller('ProjectsCtrl', function($scope, $resource, $http, $modal) {
             chart1.data = chartData;
 
             var modalInstance = $modal.open({
-            templateUrl: 'ProjectGraph.html',
+            templateUrl: '/templates/projectGraph.html',
             controller: 'GraphCtrl',
             resolve: {
                 project: function() {
