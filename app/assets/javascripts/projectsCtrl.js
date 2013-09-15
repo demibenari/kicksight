@@ -89,8 +89,8 @@ angular.module('google-chart-sample', ['googlechart']).controller("ProjectGraphC
 
 });
 
-
-angular.module('KickSight', ['ngResource', 'google-chart-sample']).controller('ProjectsCtrl', function ($scope, $resource) {
+var app = angular.module('KickSight', ['ngResource', 'google-chart-sample']);
+app.controller('ProjectsCtrl', function ($scope, $resource) {
     var _view = 1;
     $scope.view1VisibilityMode = (_view === 1 ? "table" : "none");
     $scope.view2VisibilityMode = (_view === 2 ? "block" : "none");
@@ -145,11 +145,3 @@ var _getProjectData = function (id) {
     });
     return tables;
 };
-
-
-// google.setOnLoadCallback(function () {
-//     angular.bootstrap(document.body, ['KickSight']);
-// });
-// google.load('visualization', '1', {packages: ['corechart']});
-
-
