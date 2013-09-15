@@ -57,20 +57,42 @@ body   {
     width: 472px; height: 151px;
 }
 
-.containerF{
-    float:right;
-    margin-right:20px;
+.containerF
+{
+    float:left;
+    padding-left:10px;
 }
-input[name=searchP] {
-    padding-left: 4px;
-    background-color: #452047;
-    border:none;
-    box-shadow: 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94;
-    -webkit-box-shadow: 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94, 0 0 0.7em #ED8A94;
+.containerF input
+{
+    background-color: #FFF;
+    border: 1px solid #224f95;
     border-radius: 5px;
-    outline-color:#ED8A94;
-    color: #F3FEAE;
+    color:#000;
 }
+.containerF input[type=button]
+{
+    background-color: #FFF;
+    border-radius: 5px;
+    color:#000;
+}
+
+.containerF input[type=button]:hover
+{
+    background: linear-gradient(135deg, #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%);
+}
+
+.containerF input[type=text]
+{
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+
+.containerF input[type=text]:focus
+{
+    transform: scaleX(1.4) scaleY(2) translate(50px,-20px) rotateX(360deg);
+    -webkit-transform: scaleX(1.4) scaleY(2) translate(50px,-20px) rotateX(360deg);
+}
+
 .menuContainer {
     width:302px;
 }
@@ -182,6 +204,16 @@ iframe {
     color: #F9F9F9;
     transform: scale(1.4) rotate(-10deg);
     -webkit-transform: scale(1.4) rotate(-10deg);
+}
+
+.categories{width:100%; display:inline-block;}
+.categories ul {width:100%; display:inline-block; transform:translateX(-30px); -webkit-transform:translateX(-30px);}
+.categories ul li{font-size:15px; width:7%;  border-top:0.2em solid blue; margin:0; transition: all 1s ease;-webkit-transition: all 1s ease;}
+
+.categories ul li:hover
+{
+    border-top:0.2em solid #224f95; cursor:pointer;
+    transform:scaleX(1.4) rotateX(360deg); -webkit-transform:scaleX(1.4) rotateX(360deg);
 }
 
 

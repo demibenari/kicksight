@@ -5,8 +5,8 @@
       <div class="logoImg"></div>
       <div class="containerF text1">
         <form>
-          <input type="text" name="searchP">
-          </input>
+            <input type="text" name="searchP" value="search"/>
+          <input type="button" value="Search"/>
         </form>
       </div>
 
@@ -34,6 +34,24 @@
         <div class="tab" ng-click="changeView(4)">Total</div>
       </div>
         <div class="content center" style='"display:{{view1VisibilityMode}}"'>
+      <div class="categories">
+        <ul>
+          <li>All</li>
+          <li>Art</li>
+          <li>Dance</li>
+          <li>Design</li>
+          <li>Film</li>
+          <li>DAvid</li>
+          <li>Was</li>
+          <li>Here</li>
+          <li>Yup</li>
+          <li>This</li>
+          <li>Is</li>
+          <li>A</li>
+          <li>Category</li>
+          <li>Hover me!</li>
+        </ul>
+      </div>
         <ul class="unstyled">
           {{percent()}}
           <li class="" ng-repeat="project in projects">
