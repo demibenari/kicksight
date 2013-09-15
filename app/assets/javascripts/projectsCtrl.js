@@ -197,32 +197,19 @@ app.controller('ProjectsCtrl', function($scope, $resource, $http, $modal) {
             }),
                 pointsPromise = _projectData.then(function(response) {
                     var table = {
-                        "cols": [{
-                            id: "month",
-                            label: "Month",
-                            type: "string"
-                        }, {
-                            id: "goal-id",
-                            label: "Goal",
-                            type: "number"
-                        }, {
-                            id: "pledges-id",
-                            label: "Daily Total Pledges",
-                            type: "number"
-                        }],
+                        "cols": [{ id: "month", label: "Month", type: "string" },
+                                 { id: "goal-id", label: "Goal", type: "number" },
+                                 { id: "pledges-id", label: "Daily Total Pledges", type: "number" },
+                                 { id: "trendline", label: "Trendline", type: "number" }],
                         "rows": []
                     };
 
                     angular.forEach(response.data, function(p) {
                         table.rows.push({
-                            c: [{
-                                v: p[2]
-                            }, {
-                                v: project.goal
-                            }, {
-                                v: p[1],
-                                f: p[3] + " new pledges"
-                            }]
+                            c: [{ v: p[2] },
+                                { v: project.goal },
+                                { v: p[1], f: p[3] + " new pledges" },
+                                { v: p[4] }]
                         });
                     });
 
@@ -255,7 +242,7 @@ app.controller('ProjectsCtrl', function($scope, $resource, $http, $modal) {
                     "color": "#BBBBBB"
                 }
             },
-            "colors": ["lightgreen", "pink"]
+            "colors": ["#3fc42e", "#DC1112", "#3E4693"]
         };
          getProjectData(project.kick_id).then (function( chartData) {
 

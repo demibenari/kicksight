@@ -1,10 +1,6 @@
 /* This page was full of stuff like color:red, never use this! use the hex or rgb representation as in color: #F00/rgb(255,0,0) ->red */
 
 
-
-
-
-
 .pledge-total {
     color: #109a29;
 }
@@ -63,25 +59,26 @@ li h3 {
 .wrap div{}
 
 .title {
-    width: 125px;
-    height: 30px;
+    width: 100%;
+    height: 45px;
     font-size: 12px;
     overflow: hidden;
-    float:left;
-    line-height:2
+    float: left;
+    line-height: 1;
+    font-size:15px;
 }
 .total {
     display: inline-block;
     line-height: 30px;
-    float:right;
-    width:40px
+    margin-left:80px;
+    width:40px;
 }
 .projects li{transition: all 1s ease; -webkit-transition: all 1s ease;}
 .project{width:28%;height:250px;}
 .project:hover
 {
-    transform: scale(1.4);
-    -webkit-transform: scale(1.4);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 .selectedProject{width:90%;height:500px;}
 .projects li img{width:100%;height:100%; border:1px solid black;}

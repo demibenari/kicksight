@@ -1,20 +1,3 @@
-function toggleView(button)
-{
-    var li = jQuery(button).closest('li').eq(0);
-    var selectedProjectClass = "selectedProject";
-    var projectClass = "project";
-
-    if (li.hasClass(selectedProjectClass))
-    {
-        li.removeClass(selectedProjectClass);
-        li.addClass(projectClass);
-    }
-    else
-    {
-        li.removeClass(projectClass);
-        li.addClass(selectedProjectClass);
-    }
-}
 
 var evilGlobalVarOfDeath = 360;
 function spinBitch()
@@ -28,3 +11,8 @@ $(document).ready(function()
 {
     $('.logoImg').on( "click", spinBitch);
 });
+
+$(".content").load(function()
+{
+    $(".categories li").eq(9).css('margin-left', 120);
+})

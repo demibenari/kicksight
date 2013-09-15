@@ -1,3 +1,4 @@
+<script src="js/index.js" language="JavaScript" type="text/javascript" ></script>
 <!-- <div ng-controller="ProjectsCtrl"> -->
 <div >
   <div class="banner">
@@ -13,11 +14,6 @@
           <nav class="menul">
             <a>Home</a>
             <a>Sign In</a>
-            <a>Projects</a>
-<!--              <ul class="menul subMenu">
-                <li><a>Most Successful</a></li>
-                <li><a>Failors</a></li>
-              </ul>-->
           </nav>
         </div>
     </div>
@@ -27,10 +23,6 @@
     <div class="mainContent" ng-controller="ProjectsCtrl">
       <h3 class="header center">Welcome!</h3>
       <div class='tabs_container center'>
-        <div class="tab" ng-click="changeView(1)">All</div>
-        <div class="tab" ng-click="changeView(2)">Project</div>
-        <div class="tab" ng-click="changeView(3)">Daily</div>
-        <div class="tab" ng-click="changeView(4)">Total</div>
       </div>
         <div class="content center" style='"display:{{view1VisibilityMode}}"'>
       <div class="categories">
@@ -50,10 +42,10 @@
               </div>
               <div class="wrap">
                 <div class="title white" >{{project.name}}</div>
-                <div class="total white {{color(project)}}">{{project.percent}}%</div>
               </div>
               <a class="btn" href="" ng-click="openGraph(project)" >
-                 <i class="icon-compass icon-2x"></i> Graph</a>
+                 <i class="icon-compass icon-2x graphButton"></i> Graph</a>
+              <div class="total white {{color(project)}}">{{project.percent}}%</div>
             </div>
           </li>
         </ul>
@@ -68,5 +60,5 @@
         </div>
       </div>
     </div>-->
-    </div> 
+    </div>
 </div>

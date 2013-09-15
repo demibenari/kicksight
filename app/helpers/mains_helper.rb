@@ -1,3 +1,5 @@
+require 'trendline'
+
 module MainsHelper
   def render_project(project, include_unnormal_fields = true)
     if include_unnormal_fields
@@ -39,10 +41,11 @@ module MainsHelper
   end
 
   def get_all_daily_points_of_project_with_date(projectName)
+
     all_dailies = get_dailies_by_kick_id(projectName)
 
     length_of_dailies = all_dailies.length
-    array_of_coords = Array.new(length_of_dailies) { [0, Daily.new, Date.new, 0] }
+    array_of_coords = Array.new(length_of_dailies) { [0, Daily.new, Date.new, 0, 0] }
 
     all_dailies.each_with_index do |daily, index|
       array_of_coords[index][0] = index
@@ -52,6 +55,14 @@ module MainsHelper
       array_of_coords[index][2] = push_date.push_date
       array_of_coords[index][3] = daily.amount_backers
     end
+
+    trenline = Trendline.new(array_of_coords)
+    trenline.calc_trenline
+
+    array_of_coords.each_with_index do |entry, index|
+      array_of_coords[index][4] = trenline.get_y_by_x(index)
+    end
+
     return array_of_coords
   end
 

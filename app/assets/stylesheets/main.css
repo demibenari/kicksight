@@ -4,6 +4,7 @@
 */
 
 
+
 @font-face {
     font-family: "Helsinki";
     src: url("helsinki.ttf") format("truetype");
@@ -96,7 +97,7 @@ body   {
 }
 
 .menuContainer {
-    width:302px;
+    width:202px;
 }
 
 .menul {
@@ -113,7 +114,6 @@ body   {
     display: block;
     float: left;
     padding: 5px 0 5px 0;
-    margin: 0; /* Overriding default of 15, Need to check why is it default...*/
     text-align: center;
     color: #000;
     transition: all 1s ease;
@@ -145,7 +145,7 @@ body   {
 .frontView  {
     display: block;
     border-radius: 5px;
-    background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 65%,#f6f6f6 100%);
+    background: -webkit-linear-gradient(bottom, rgb(92,127,184) 99%, rgb(255,255,255) 7%);
     box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
     -webkit-box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
 }
@@ -162,6 +162,8 @@ body   {
     -webkit-text-shadow: 0 0 0.5em #888, 0 0 0.2em black, 0 0 0.2em #888;
     text-align:center;
     transform:translateX(-130px);
+    -webkit-transform:translateX(-115px);
+    margin:15px 0 15px 0;
 }
 .content    {
     width:960px; /* Standard for 17' screens will work on most resolutions..  */
@@ -206,9 +208,9 @@ iframe {
     -webkit-transform: scale(1.4) rotate(-10deg);
 }
 
-.categories{width:100%; display:inline-block;}
-.categories ul {width:100%; display:inline-block; transform:translateX(-15px); -webkit-transform:translateX(-15px); margin-top:10px}
-.categories ul li{font-size:15px; width:7%;  border-top:0.2em solid blue; margin:0; transition: all 1s ease;-webkit-transition: all 1s ease; word-wrap:break-word;}
+.categories{width:90%; display:inline-block;}
+.categories ul {width:100%; margin:0 auto; display:inline-block; transform:translateX(50px); text-align:center; -webkit-transform:translateX(55px); margin-top:10px}
+.categories ul li{font-size:12px; width:11%;  border-top:0.2em solid blue; margin:0; transition: all 1s ease;-webkit-transition: all 1s ease; word-wrap:break-word;}
 
 .categories ul li:hover
 {
@@ -228,4 +230,3 @@ iframe {
 {
     max-height: 500px;
 }
-

@@ -1,5 +1,5 @@
 class Trendline
-  attr_accessor :y_intercept, :slope, :max_x, :max_y
+  attr_accessor :y_intercept, :slope
 
   def initialize(coordinates)
     @coordinates = coordinates
@@ -55,7 +55,10 @@ class Trendline
 
     self.slope = calc_slope
     self.y_intercept = calc_y_intercept
-    self.max_x = @coordinates[n -1][0]
-    self.max_y = (self.max_x * self.slope) + self.y_intercept
+  end
+
+  def get_y_by_x(x_val)
+    y_val = (x_val * self.slope) + self.y_intercept
+    return y_val
   end
 end
